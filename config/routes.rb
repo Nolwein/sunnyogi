@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  ressources :lessons, only: [:new, :create, :show, :destroy] do
+    ressources :favorites, only: [:create]
+  end
+
+  ressources :favorites, only: [:destroy]
+
+  ressources :profiles, only: [:show]
+
+  # xp user update route à déterminer (ou déjà gérée par devise_for :users)
 end
