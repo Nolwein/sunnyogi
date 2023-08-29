@@ -1,0 +1,144 @@
+// .main-container {
+//   padding: 20px 30px;
+// }
+
+
+
+
+.profile-infos-card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 40%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+
+
+.update-profile-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 15px;
+  background-color: #dbdbdb;
+  color: #323232;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.update-profile-btn:hover {
+  background-color: #bebebe;
+}
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @media (max-width: 1000px) {
+//   .reservations-grid {
+//     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+//   }
+// }
+
+
+// @media (max-width: 600px) {
+//   .reservations-grid {
+//     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+//   }
+
+//   .reservation-card {
+//     padding: 20px;
+//   }
+// }
+
+
+
+
+
+// // MY OWN BOOKS
+
+// .books-header {
+//   display: flex;
+//   justify-content: center; /* Centrer horizontalement */
+//   align-items: center; /* Centrer verticalement */
+//   gap: 10px;
+//   margin-bottom: 10px;
+//   height: 10vh; /* Hauteur de 100% de la vue (viewport height) */
+// }
+
+// .books-header h2 {
+//   margin: 0;
+//   font-size: 1.5rem;
+//   color: rgb(50, 50, 50);
+//   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+// }
+
+// .owned-books-grid {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+//   gap: 15px;
+// }
+
+// .owned-book-card {
+//   width: 100%;
+//   padding: 20px;
+//   border: 1px solid #ddd;
+//   border-radius: 10px;
+//   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+//   transition: all 0.3s ease-in-out;
+//   text-align: center; /* Centrer le contenu horizontalement */
+//   margin-bottom: 10px;
+// }
+
+// .owned-book-card:hover {
+//   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+// }
+
+// .owned-book-card h2 {
+//   margin: 10px 0;
+//   color: rgb(9, 9, 9);
+//   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7);
+//   text-align: center;
+//   font-size: 1.2rem;
+// }
+
+// .owned-book-card p {
+//   margin: 5px 0;
+//   text-align: center;
+//   color: rgb(50, 50, 50);
+//   font-size: 0.7rem;
+//   font-style: italic
+// }
+
+// .price {
+//   font-style: italic;
+// }
+
+// .book-cover-user {
+//   width: 100%;
+//   height: auto;
+//   display: block;
+// }
