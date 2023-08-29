@@ -1,0 +1,21 @@
+<h1>Lessons#show</h1>
+
+
+<div class="container">
+  Lesson CARD
+  <ul>
+    <li><%= @lesson.user.email %></li>
+    <li><%= @lesson.name %></li>
+    <li><%= @lesson.duration %></li>
+    <li><%= @lesson.breathing %></li>
+    <li><%= @lesson.posture %></li>
+    <li><%= @lesson.meditation %></li>
+    <li><%= @lesson.level %></li>
+    <li><%= @lesson.boost %></li>
+  </ul>
+
+  <%= link_to "Delete", lesson_path(@lesson), class: "btn btn-danger",
+  data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
+
+  <%= link_to "Go back to HOME", root_path, class: "btn btn-primay" %>
+</div>
