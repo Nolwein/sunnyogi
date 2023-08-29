@@ -1,7 +1,6 @@
 # NOTE: Refaire le lesson model car les boolean "false" font foirer la seed
 
 
-
 puts "Cleaning database..."
 User.destroy_all
 Video.destroy_all
@@ -40,9 +39,9 @@ bob = User.create!(
   reward: "Super GIFT!"
 )
 
-# file = File.open(Rails.root.join("db/seeds/users/bob.jpg"))
-# bob.avatar.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
-
+file = File.open(Rails.root.join("db/seeds/users/bob.jpg"))
+bob.avatar.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+bob.save
 
 
 charlie = User.create!(
@@ -54,9 +53,9 @@ charlie = User.create!(
   reward: "Super GIFT!"
 )
 
-# file = File.open(Rails.root.join("db/seeds/users/charlie.jpg"))
-# charlie.avatar.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
-
+file = File.open(Rails.root.join("db/seeds/users/charlie.jpg"))
+charlie.avatar.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+charlie.save
 
 
 puts "--------------"
@@ -182,6 +181,16 @@ puts "Creating favorites..."
 Favorite.create!(
   user_id: User.first.id,                  # Assign other User id
   lesson_id: Lesson.first.id               # Assign other Lesson id
+)
+
+Favorite.create!(
+  user_id: User.first.id,                  # Assign other User id
+  lesson_id: Lesson.last.id               # Assign other Lesson id
+)
+
+Favorite.create!(
+  user_id: User.last.id,                   # Assign other User id
+  lesson_id: Lesson.first.id                # Assign other Lesson id
 )
 
 Favorite.create!(

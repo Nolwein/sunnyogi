@@ -1,40 +1,29 @@
 <div class="container">
+  <h2>DASHBOARD</h2>
+
+
   <%# PROFILE INFO %>
-  <div>
-    <h3>DASHBOARD OF THE PROFILE:</h3>
-    <p>Email: <%= @user.email %></p>
-    <p>Username: <%= @user.username %></p>
-    <%= cl_image_tag @user.avatar.key, class: "avatar m-2", alt: "User Avatar" %> </a>
+  <div class="profile-infos-card">
+    <%= cl_image_tag @user.avatar.key, class: "user-avatar", alt: "User Avatar" %> </a>
+    <p><strong>Email: </strong><%= @user.email %></p>
+    <p><strong>Username: </strong><%= @user.username %></p>
+
+    <%= link_to 'Update Profile', edit_user_registration_path, class: 'update-profile-btn' %>
   </div>
 
   <%# LESSONS INFOS %>
   <div>
     <h3>LESSONS INFOS:</h3>
-    <% @favorites.each do |favorite| %>
-      <li>
-        <strong>Favorite Lesson Name: </strong><%= favorite.lesson.name %>
-        <i class="fa-solid fa-file-signature" style="color: #5c5c5c;"></i>
-      </li>
-      <li>
-        <strong>Favorite Lesson Duration: </strong><%= favorite.lesson.duration %>
-        <i class="fa-solid fa-clock" style="color: #5c5c5c;"></i>
-      </li>
-      <li>
-        <strong>Favorite Lesson Level: </strong><%= favorite.lesson.level %>
-        <i class="fa-solid fa-layer-group" style="color: #5c5c5c;"></i>
-      </li>
-      <li>
-        <strong>Favorite Lesson Boost: </strong><%= favorite.lesson.boost %>
-        <i class="fa-solid fa-bolt" style="color: #5c5c5c;"></i>
-      </li>
-    <% end %>
+    <div class="lessons-infos-card">
+      <% @favorites.each do |favorite| %>
+        <li><strong><%= favorite.lesson.name %></strong></li>
+        <i class="fa-solid fa-clock" style="color: #5c5c5c;"></i><%= favorite.lesson.duration %>
+        <i class="fa-solid fa-layer-group" style="color: #5c5c5c;"></i><%= favorite.lesson.level %>
+        <i class="fa-solid fa-bolt" style="color: #5c5c5c;"></i><%= favorite.lesson.boost %>
+      <% end %>
   </div>
+
+
+
+  <%= link_to "Go back to HOME", root_path, class: "btn btn-primary mt-5" %>
 </div>
-
-
-
-
-
-
-
-<%= link_to "Go back to HOME", root_path, class: "btn btn-primary mt-5" %>
