@@ -17,6 +17,7 @@ class LessonsController < ApplicationController
 
   def show
     @lesson = Lesson.find(params[:id])
+    @favorite = Favorite.new
   end
 
   def destroy
