@@ -14,6 +14,8 @@ Favorite.destroy_all
 
 
 puts "Creating users..."
+
+
 alice = User.new(
   email:    "alice@example.com",
   password: "password",
@@ -30,7 +32,7 @@ alice.save
 
 
 
-bob = User.create!(
+bob = User.new(
   email:    "bob@example.com",
   password: "password",
   username: "Bob",
@@ -44,7 +46,7 @@ bob.avatar.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 bob.save
 
 
-charlie = User.create!(
+charlie = User.new(
   email:    "charlie@example.com",
   password: "password",
   username: "Charlie",
@@ -72,7 +74,42 @@ puts "Users created!"
 puts "Creating videos..."
 
 
-Video.create!(
+# Video.create!(
+#   name: "Breathing Exercise 1",
+#   video_category: "breathing",
+#   duration: 5,
+#   boost: "Chest",
+#   level: "beginner"
+# )
+
+# Video.create!(
+#   name: "Breathing Exercice 2",
+#   video_category: "posture",
+#   duration: 10,
+#   boost: "Backbend",
+#   level: "intermediate"
+# )
+
+# Video.create!(
+#   name: "Posture Exercice 1",
+#   video_category: "posture",
+#   duration: 10,
+#   boost: "Backbend",
+#   level: "beginner"
+# )
+
+# Video.create!(
+#   name: "Posture Exercice 2",
+#   video_category: "posture",
+#   duration: 10,
+#   boost: "Backbend",
+#   level: "intermediate"
+# )
+
+
+
+
+video1 = Video.new(
   name: "Breathing Exercise 1",
   video_category: "breathing",
   duration: 5,
@@ -80,7 +117,12 @@ Video.create!(
   level: "beginner"
 )
 
-Video.create!(
+file = File.open(Rails.root.join("db/seeds/videos/miniature1.jpg"))
+video1.miniature.attach(io: file, filename: "miniature.jpg", content_type: "image/jpeg")
+video1.save
+
+
+video2 = Video.new(
   name: "Breathing Exercice 2",
   video_category: "posture",
   duration: 10,
@@ -88,7 +130,12 @@ Video.create!(
   level: "intermediate"
 )
 
-Video.create!(
+file = File.open(Rails.root.join("db/seeds/videos/miniature2.jpg"))
+video2.miniature.attach(io: file, filename: "miniature.jpg", content_type: "image/jpeg")
+video2.save
+
+
+video3 = Video.new(
   name: "Posture Exercice 1",
   video_category: "posture",
   duration: 10,
@@ -96,7 +143,12 @@ Video.create!(
   level: "beginner"
 )
 
-Video.create!(
+file = File.open(Rails.root.join("db/seeds/videos/miniature3.jpg"))
+video3.miniature.attach(io: file, filename: "miniature.jpg", content_type: "image/jpeg")
+video3.save
+
+
+video4 = Video.new(
   name: "Posture Exercice 2",
   video_category: "posture",
   duration: 10,
@@ -104,11 +156,15 @@ Video.create!(
   level: "intermediate"
 )
 
+file = File.open(Rails.root.join("db/seeds/videos/miniature4.jpg"))
+video4.miniature.attach(io: file, filename: "miniature.jpg", content_type: "image/jpeg")
+video4.save
+
+
+
+
 puts "--------------"
 puts "Videos created!"
-
-
-
 
 
 
@@ -201,3 +257,6 @@ Favorite.create!(
 
 puts "--------------"
 puts "Favorites created!"
+
+puts "--------------"
+puts "Finished!"

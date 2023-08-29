@@ -1,29 +1,29 @@
 <div class="container">
-  <h2>DASHBOARD</h2>
 
-
-  <%# PROFILE INFO %>
+  <!-- PROFILE -->
   <div class="profile-infos-card">
-    <%= cl_image_tag @user.avatar.key, class: "user-avatar", alt: "User Avatar" %> </a>
+    <%= cl_image_tag @user.avatar.key, class: "user-avatar", alt: "User Avatar" %>
     <p><strong>Email: </strong><%= @user.email %></p>
     <p><strong>Username: </strong><%= @user.username %></p>
 
     <%= link_to 'Update Profile', edit_user_registration_path, class: 'update-profile-btn' %>
   </div>
 
-  <%# LESSONS INFOS %>
+  <!-- LESSONS -->
   <div>
-    <h3>LESSONS INFOS:</h3>
-    <div class="lessons-infos-card">
+    <h3>LESSONS:</h3>
+    <div class="lessons-infos-grid">
       <% @favorites.each do |favorite| %>
-        <li><strong><%= favorite.lesson.name %></strong></li>
-        <i class="fa-solid fa-clock" style="color: #5c5c5c;"></i><%= favorite.lesson.duration %>
-        <i class="fa-solid fa-layer-group" style="color: #5c5c5c;"></i><%= favorite.lesson.level %>
-        <i class="fa-solid fa-bolt" style="color: #5c5c5c;"></i><%= favorite.lesson.boost %>
+        <div class="lesson-card">
+          <iframe width="350" height="250" src="https://www.youtube.com/embed/NJU8dcCacRY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <h3><%= favorite.lesson.name %></h3>
+          <i class="fa-solid fa-clock" style="color: #5c5c5c;"></i><%= favorite.lesson.duration %>
+          <i class="fa-solid fa-layer-group" style="color: #5c5c5c;"></i><%= favorite.lesson.level %>
+          <i class="fa-solid fa-bolt" style="color: #5c5c5c;"></i><%= favorite.lesson.boost %>
+        </div>
       <% end %>
+    </div>
   </div>
-
-
 
   <%= link_to "Go back to HOME", root_path, class: "btn btn-primary mt-5" %>
 </div>

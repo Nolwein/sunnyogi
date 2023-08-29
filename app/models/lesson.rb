@@ -3,6 +3,9 @@ class Lesson < ApplicationRecord
   has_many :playlists
   has_many :videos, through: :playlists
 
+  has_one_attached :miniature
+
+
   validates :name, presence: true, uniqueness: true
   # validates :duration, lenght: { minimum: 1 }
 
