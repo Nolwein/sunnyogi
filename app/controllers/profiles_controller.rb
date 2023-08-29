@@ -3,6 +3,6 @@ class ProfilesController < ApplicationController
 
   def show
     @user = current_user
-    # @favorites = @user.favorites
+    @favorites = @user.favorites
   end
 end

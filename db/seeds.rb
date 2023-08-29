@@ -1,3 +1,7 @@
+# NOTE: Refaire le lesson model car les boolean "false" font foirer la seed
+
+
+
 puts "Cleaning database..."
 User.destroy_all
 Video.destroy_all
@@ -23,9 +27,11 @@ alice = User.new(
 
 file = File.open(Rails.root.join("db/seeds/users/alice.jpg"))
 alice.avatar.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+alice.save
 
 
-bob = User.new(
+
+bob = User.create!(
   email:    "bob@example.com",
   password: "password",
   username: "Bob",
@@ -34,12 +40,12 @@ bob = User.new(
   reward: "Super GIFT!"
 )
 
-file = File.open(Rails.root.join("db/seeds/users/bob.jpg"))
-bob.avatar.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+# file = File.open(Rails.root.join("db/seeds/users/bob.jpg"))
+# bob.avatar.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
 
 
-charlie = User.new(
+charlie = User.create!(
   email:    "charlie@example.com",
   password: "password",
   username: "Charlie",
@@ -48,8 +54,8 @@ charlie = User.new(
   reward: "Super GIFT!"
 )
 
-file = File.open(Rails.root.join("db/seeds/users/charlie.jpg"))
-charlie.avatar.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
+# file = File.open(Rails.root.join("db/seeds/users/charlie.jpg"))
+# charlie.avatar.attach(io: file, filename: "avatar.jpg", content_type: "image/jpeg")
 
 
 
@@ -69,23 +75,42 @@ puts "Creating videos..."
 
 Video.create!(
   name: "Breathing Exercise 1",
-  type: "breathing",
+  video_category: "breathing",
   duration: 5,
   boost: "Chest",
   level: "beginner"
 )
 
 Video.create!(
-  name: "Posture Practice",
-  type: "posture",
+  name: "Breathing Exercice 2",
+  video_category: "posture",
   duration: 10,
   boost: "Backbend",
   level: "intermediate"
 )
 
+Video.create!(
+  name: "Posture Exercice 1",
+  video_category: "posture",
+  duration: 10,
+  boost: "Backbend",
+  level: "beginner"
+)
+
+Video.create!(
+  name: "Posture Exercice 2",
+  video_category: "posture",
+  duration: 10,
+  boost: "Backbend",
+  level: "intermediate"
+)
 
 puts "--------------"
 puts "Videos created!"
+
+
+
+
 
 
 
@@ -103,7 +128,7 @@ Lesson.create!(
   duration: 30,
   breathing: true,
   posture: true,
-  meditation: false,
+  meditation: true,
   level: "beginner",
   boost: "Backbend"
 )
@@ -112,13 +137,12 @@ Lesson.create!(
   user_id: User.first.id,                 # Assign other User id
   name: "Intermediate Meditation",
   duration: 15,
-  breathing: false,
-  posture: false,
+  breathing: true,
+  posture: true,
   meditation: true,
   level: "intermediate",
   boost: "Neck"
 )
-
 
 Lesson.create!(
   user_id: User.first.id,                 # Assign other User id
@@ -137,7 +161,7 @@ Lesson.create!(
   duration: 20,
   breathing: true,
   posture: true,
-  meditation: false,
+  meditation: true,
   level: "intermediate",
   boost: "Hamstring"
 )

@@ -11,7 +11,6 @@ class Lesson < ApplicationRecord
   validates :meditation, presence: true
 
   # validates :level, inclusion: { in: %w[beginner intermediate advanced], message: "%{value} is not a valid level" }
-
   # validates :boost, inclusion: { in: %w[Neck Chest Backbend Hips Hamstring Twits], message: "%{value} is not a valid boost" }
 
 end
