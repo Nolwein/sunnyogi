@@ -39,6 +39,9 @@
           <i class="fa-solid fa-clock" style="color: #5c5c5c;"></i><%= lesson.duration %>
           <i class="fa-solid fa-layer-group" style="color: #5c5c5c;"></i><%= lesson.level %>
           <i class="fa-solid fa-bolt" style="color: #5c5c5c;"></i><%= lesson.boost %>
+            <%= link_to lesson_path(lesson), data: { turbo_method: 'delete', turbo_confirm: 'Are you sure ?' } do %>
+            <i class="fa-solid fa-trash" style="color: #ea0b0b;"></i>
+            <% end %>
         </div>
       <% end %>
     </div>
