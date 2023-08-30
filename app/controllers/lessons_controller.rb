@@ -1,6 +1,7 @@
 class LessonsController < ApplicationController
   def new
     @lesson = Lesson.new
+    @user = current_user
   end
 
   def create
@@ -16,6 +17,7 @@ class LessonsController < ApplicationController
   end
 
   def show
+    @user = current_user
     @lesson = Lesson.find(params[:id])
     @favorite = Favorite.new
   end

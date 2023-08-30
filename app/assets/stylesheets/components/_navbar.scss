@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background-color: transparent;
+  z-index: 10;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -17,5 +18,22 @@
   height: 50px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 10px;
+}
+
+
+.text-link {
+  font-family: 'Spicy Rice', cursive;
+  font-size: 50px;
+  text-decoration: none;
+  color: white;
+}
+
+.orange-btn {
+  background-color: #C27E62;
+  padding: 20px 40px;
+  text-decoration: none;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
 }
