@@ -1,6 +1,22 @@
 <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
   <div class="col-md-6">
     <h1>Create a new Lesson</h1>
-    <%= render 'form', lesson: @lesson %>
+    
+    <%= simple_form_for @lesson do |form| %>
+  <%= form.input :name %>
+  <%= form.input :duration, collection: ['5min', '10min', '15min', '20min']%>
+  <%= form.input :breathing %>
+  <%= form.input :posture %>
+  <%= form.input :meditation %>
+  <%= form.input :level, collection: ['beginner', 'intermediate', 'advanced'] %>
+  <%= form.input :boost, collection: ['💪 Arm', 'Legs', 'Back'] %>
+
+  <%= form.button :submit, "Create Lesson",
+      class: "btn btn-primary mt-3 mb-3" %>
+<% end %>
+
+
+<%= link_to "Go back to HOME", root_path %>
+
   </div>
 </div>
