@@ -185,7 +185,8 @@ Lesson.create!(
   posture: true,
   meditation: true,
   level: "beginner",
-  boost: "Backbend"
+  boost: "Backbend",
+  video_url: "https://www.youtube.com/embed/fhMxNjie7AE"
 )
 
 Lesson.create!(
@@ -196,7 +197,8 @@ Lesson.create!(
   posture: true,
   meditation: true,
   level: "intermediate",
-  boost: "Neck"
+  boost: "Neck",
+  video_url: "https://www.youtube.com/embed/NJU8dcCacRY"
 )
 
 Lesson.create!(
@@ -207,8 +209,10 @@ Lesson.create!(
   posture: true,
   meditation: true,
   level: "advanced",
-  boost: "Hips"
+  boost: "Hips",
+  video_url: "https://www.youtube.com/embed/FZ-6i6gZawM"
 )
+
 
 Lesson.create!(
   user_id: User.last.id,                 # Assign other User id
@@ -218,7 +222,8 @@ Lesson.create!(
   posture: true,
   meditation: true,
   level: "intermediate",
-  boost: "Hamstring"
+  boost: "Hamstring",
+  video_url: "https://www.youtube.com/embed/_LvGTQ3Aq-g"
 )
 
 
