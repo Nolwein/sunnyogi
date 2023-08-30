@@ -2,6 +2,7 @@ class LessonsController < ApplicationController
   def new
     @user = current_user
     @lesson = Lesson.new
+    @user = current_user
   end
 
   def create

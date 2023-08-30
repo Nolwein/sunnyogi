@@ -1,22 +1,105 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%# HEADER SECTION %>
+<div class="header-section"
+     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path('home/header.jpg') %>');">
+  <h1>YOUR PERSONNAL GUIDE TO CONSCIOUNESS MOVEMENT</h1>
+</div>
 
 
+<%# CONTENT SECTION %>
+<div>
+  <%# SECTION 1 %>
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-md-4 border border-secondary">
+        <%= image_tag('home/image1.jpg', alt: 'Image 1', class: 'home-image') %>
+      </div>
+      <div class="col-md-8 border border-secondary">
+        <h2 class="spicy-rice-title">Breathe, Moove, Meditation</h2>
+        <p style="margin-left: 160px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            quis lorem ut libero malesuada feugiat. Nullam sit amet ex et mi posuere tristique.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
+            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
+            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
+            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
+            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.</p>
+      </div>
+    </div>
+  </div>
 
 
-<%= link_to 'Create a new lesson', new_lesson_path, class: "btn btn-primary mb-3" %>
+  <%# SECTION 2 %>
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-md-6 border border-secondary" style="overflow: visible">
+        <h2 class="spicy-rice-title" style="white-space: nowrap; position:absolute;">
+            Breathe, Moove, Meditation
+        </h2>
+        <p style="margin-top: 90px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            quis lorem ut libero malesuada feugiat. Nullam sit amet ex et mi posuere tristique.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
+            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
+            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
+            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
+            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.</p>
+      </div>
+      <div class="col-md-6 border border-secondary">
+        <%= image_tag('home/image2.jpg', alt: 'Image 1', class: 'home-image') %>
+      </div>
+    </div>
+  </div>
 
 
+  <%# SECTION 3 %>
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-md-4 border border-secondary">
+        <%= image_tag('home/image3.jpg', alt: 'Image 1', class: 'home-image') %>
+      </div>
+      <div class="col-md-8 border border-secondary">
+        <h2 class="spicy-rice-title">Breathe, Moove, Meditation</h2>
+        <p style="margin-left: 160px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            quis lorem ut libero malesuada feugiat. Nullam sit amet ex et mi posuere tristique.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
+            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
+            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
+            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
+            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.</p>
+      </div>
+    </div>
+  </div>
 
 
+  <%# SECTION 4 %>
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-md-6 border border-secondary" style="overflow: visible">
+        <h2 class="spicy-rice-title" style="white-space: nowrap; position:absolute;">
+            Breathe, Moove, Meditation
+        </h2>
+        <p style="margin-top: 90px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+            quis lorem ut libero malesuada feugiat. Nullam sit amet ex et mi posuere tristique.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
+            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
+            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
+            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
+            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.</p>
+      </div>
+      <div class="col-md-6 border border-secondary">
+        <%= image_tag('home/image4.jpg', alt: 'Image 1', class: 'home-image') %>
+      </div>
+    </div>
+  </div>
 
-
-
-<h3>TODO:</h3>
-<ul>
-  <li><p>Maxime: Create a dashboard where the user can access all his lessons <strong>(We need to modify the routes)</strong></p>
-  <li><p>Maxime: Link to profile in the navbar (pagesController #home)</p></li>
-      <%#=  -----------------    ÇA MARCHE PAS     -----------------  %>
-      <%#= link_to 'Go to Profile', profiles_path, class: "btn btn-primary mb-3" %>
-</li>
-</ul>
+</div>
