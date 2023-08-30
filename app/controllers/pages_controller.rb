@@ -8,5 +8,6 @@ class PagesController < ApplicationController
   def profile
     @user = current_user
     @favorites = @user.favorites
+    @lessons = @user.lessons
   end
 end

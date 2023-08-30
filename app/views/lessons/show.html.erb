@@ -3,6 +3,7 @@
 
 <div class="container">
   Lesson CARD
+   <iframe width="350" height="250" src="<%= @lesson.video_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   <ul>
     <li><%= @lesson.user.email %></li>
     <li><%= @lesson.name %></li>
@@ -14,8 +15,11 @@
     <li><%= @lesson.boost %></li>
   </ul>
 
-  <%= link_to "Delete", lesson_path(@lesson), class: "btn btn-danger",
-  data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
+  <%= link_to "Add to your favorite lessons", lesson_favorites_path(@lesson), class: "btn btn-primary",
+  data: {turbo_method: :post}%>
 
-  <%= link_to "Go back to HOME", root_path, class: "btn btn-primary" %>
+  <%= link_to "Delete this lesson", lesson_path(@lesson), class: "btn btn-danger",
+  data: { turbo_method: :delete, turbo_confirm: 'Are you sure ?' } %>
+
+  <%= link_to "Go back to HOME", profile_path, class: "btn btn-primary" %>
 </div>

@@ -2,10 +2,10 @@
 
 
 puts "Cleaning database..."
-User.destroy_all
+Favorite.destroy_all
 Video.destroy_all
 Lesson.destroy_all
-Favorite.destroy_all
+User.destroy_all
 
 
 #############################################
