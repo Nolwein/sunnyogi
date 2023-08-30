@@ -17,7 +17,7 @@
   <%= link_to "Add to your favorite lessons", lesson_favorites_path(@lesson), class: "btn btn-primary",
   data: {turbo_method: :post}%>
 
-  <%= link_to "Delete", lesson_path(@lesson), class: "btn btn-danger",
+  <%= link_to "Delete this lesson", lesson_path(@lesson), class: "btn btn-danger",
   data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
 
   <%= link_to "Go back to HOME", root_path, class: "btn btn-primary" %>

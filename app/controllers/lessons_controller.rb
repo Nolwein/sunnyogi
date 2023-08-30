@@ -1,5 +1,6 @@
 class LessonsController < ApplicationController
   def new
+    @user = current_user
     @lesson = Lesson.new
   end
 
@@ -9,13 +10,14 @@ class LessonsController < ApplicationController
     @lesson.user = @user
 
     if @lesson.save
-      redirect_to lesson_path(@lesson), notice: 'Lesson was successfuly created'
+      redirect_to lesson_path(@lesson), notice: 'Lesson was successfuly created !'
     else
       render :new
     end
   end
 
   def show
+    @user = current_user
     @lesson = Lesson.find(params[:id])
     @favorite = Favorite.new
   end
@@ -23,7 +25,7 @@ class LessonsController < ApplicationController
   def destroy
     @lesson = Lesson.find(params[:id])
     @lesson.destroy
-    redirect_to root_path, notice: 'Lesson was successfully deleted'
+    redirect_to root_path, notice: 'Lesson was successfully deleted !'
   end
 
   private
