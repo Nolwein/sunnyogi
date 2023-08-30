@@ -3,21 +3,20 @@ class FavoritesController < ApplicationController
 
   def create
     @lesson = Lesson.find(params[:lesson_id])
-    # @user = current_user
     @favorite = Favorite.new(user: current_user, lesson: @lesson)
 
     if @favorite.save
-      flash[:notice] = "Successfully add to your favorites!"
-      # redirect_to lessons_path
+      flash[:notice] = "Successfully add to your favorite lessons !"
+      redirect_to lesson_path(@lesson)
     else
-      flash[:alert] = "Unable to add to your favorite. Please try again."
+      flash[:alert] = "Already in your favorites lessons."
       redirect_to lesson_path(@lesson)
     end
   end
 
   def destroy
     @favorite.destroy
-    redirect_to owner_profile_path, status: :see_other
+    redirect_to profile_path, status: :see_other
   end
 
   private
@@ -25,4 +24,5 @@ class FavoritesController < ApplicationController
   def set_favorite
     @favorite = Favorite.find(params[:id])
   end
+
 end
