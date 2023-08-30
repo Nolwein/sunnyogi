@@ -15,7 +15,7 @@
     <div class="lessons-infos-grid">
       <% @favorites.each do |favorite| %>
         <div class="lesson-card">
-          <iframe width="350" height="250" src="https://www.youtube.com/embed/NJU8dcCacRY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="350" height="250" src="<%= favorite.lesson.video_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           <h3><%= favorite.lesson.name %></h3>
           <i class="fa-solid fa-clock" style="color: #5c5c5c;"></i><%= favorite.lesson.duration %>
           <i class="fa-solid fa-layer-group" style="color: #5c5c5c;"></i><%= favorite.lesson.level %>
@@ -27,3 +27,4 @@
 
   <%= link_to "Go back to HOME", root_path, class: "btn btn-primary mt-5" %>
 </div>
+
