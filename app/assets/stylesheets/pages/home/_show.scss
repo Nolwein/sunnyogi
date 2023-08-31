@@ -15,6 +15,9 @@
 
 // Bien refactor pour le Spicy Rice
 .header-section h1 {
+  position: absolute;
+  bottom: 80px;
+  left: 40px;
   font-size: 3rem;
   font-family: 'Spicy Rice', cursive;
   color: #FFFFFF;
@@ -27,8 +30,24 @@
 }
 
 
+// SPICY FONT + COLORS
 .spicy-rice-title {
   font-family: 'Spicy Rice', cursive;
   font-size: 70px;
+}
+
+.color-spicy-1 {
+  color: #668A6E;
+}
+
+.color-spicy-2 {
   color: #C27E62;
+}
+
+.color-spicy-3 {
+  color: #bbb271;
+}
+
+.color-spicy-4 {
+  color: #5c3cdb;
 }

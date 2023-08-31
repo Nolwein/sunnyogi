@@ -1,7 +1,9 @@
 <%# HEADER SECTION %>
 <div class="header-section"
      style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path('home/header.jpg') %>');">
-  <h1>YOUR PERSONNAL GUIDE TO CONSCIOUNESS MOVEMENT</h1>
+  <div class="header-content" style="width: 200px; margin: 0 auto;">
+    <h1>YOUR PERSONNAL GUIDE TO CONSCIOUNESS MOVEMENT</h1>
+  </div>
 </div>
 
 
@@ -10,21 +12,24 @@
   <%# SECTION 1 %>
   <div class="container mt-5 mb-5">
     <div class="row">
-      <div class="col-md-4 border border-secondary">
-        <%= image_tag('home/image1.jpg', alt: 'Image 1', class: 'home-image') %>
+      <div class="col-md-4">
+        <%= image_tag('home/image1.jpg', alt: 'Image 1', class: 'home-image', style: 'border-radius: 20px;') %>
       </div>
-      <div class="col-md-8 border border-secondary">
-        <h2 class="spicy-rice-title">Breathe, Moove, Meditation</h2>
-        <p style="margin-left: 160px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            quis lorem ut libero malesuada feugiat. Nullam sit amet ex et mi posuere tristique.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
-            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
-            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
-            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
-            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.</p>
+      <div class="col-md-8">
+        <h2 class="spicy-rice-title color-spicy-1">Breathe, Moove, Meditation</h2>
+        <div style="margin-left: 160px;">
+          <h3>Choose what is the best for you</h3>
+          <p>Find breathing technique to lower stress and bring focus. They take just few
+            minutes and can be done from everywhere.</p>
+          <p>These accessible breathing techniques offer a quick respite in the midst of a
+            hectic day. As you inhale and exhale with intention, the rhythm of your breath
+            becomes an anchor, grounding you in the present moment.</p>
+          <p>One effective method is the Nadi Shodhana breathing technique. With this practice,
+            you alternate inhaling and exhaling through each nostril while using your fingers to
+            regulate airflow. This rhythmic breathwork harmonizes the left and right hemispheres
+            of the brain, promoting balance and reducing stress. Regular Nadi Shodhana practice
+            can lead to improved focus and a calmer mind. </p>
+        </div>
       </div>
     </div>
   </div>
@@ -33,23 +38,24 @@
   <%# SECTION 2 %>
   <div class="container mt-5 mb-5">
     <div class="row">
-      <div class="col-md-6 border border-secondary" style="overflow: visible">
-        <h2 class="spicy-rice-title" style="white-space: nowrap; position:absolute;">
+      <div class="col-md-6 style="overflow: visible">
+        <h2 class="spicy-rice-title color-spicy-2" style="white-space: nowrap; position:absolute;">
             Breathe, Moove, Meditation
         </h2>
-        <p style="margin-top: 90px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            quis lorem ut libero malesuada feugiat. Nullam sit amet ex et mi posuere tristique.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
-            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
-            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
-            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
-            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.</p>
+        <div style="margin-top: 90px;">
+          <h3>Choose what is best for you</h3>
+          <p>Choose your own yoga class for body, mind, and spirit. Improve your balance, strengh
+            and flexibiliy with classes for all levels. </p>
+          <p> As you embark on this journey, consider the art of designing your yoga practice to align
+            with your goals and aspirations. Embrace a range of dynamic asanas that challenge your body
+            and invigorate your spirit, allowing you to push boundaries and discover new levels of strength.</p>
+          <p>By curating your practice with a mix of invigorating and calming postures, you'll craft a balanced
+            routine that that foster a deep mind-body connection, enhancing your mental clarity and focus. Just
+            as life is a collection of experiences, your yoga mat becomes a canvas for self-expression and growth. </p>
+        </div>
       </div>
-      <div class="col-md-6 border border-secondary">
-        <%= image_tag('home/image2.jpg', alt: 'Image 1', class: 'home-image') %>
+      <div class="col-md-6">
+        <%= image_tag('home/image2.jpg', alt: 'Image 1', class: 'home-image', style: 'border-radius: 20px;') %>
       </div>
     </div>
   </div>
@@ -58,48 +64,66 @@
   <%# SECTION 3 %>
   <div class="container mt-5 mb-5">
     <div class="row">
-      <div class="col-md-4 border border-secondary">
-        <%= image_tag('home/image3.jpg', alt: 'Image 1', class: 'home-image') %>
+      <div class="col-md-4">
+        <%= image_tag('home/image3.jpg', alt: 'Image 1', class: 'home-image', style: 'border-radius: 20px;') %>
       </div>
-      <div class="col-md-8 border border-secondary">
-        <h2 class="spicy-rice-title">Breathe, Moove, Meditation</h2>
-        <p style="margin-left: 160px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            quis lorem ut libero malesuada feugiat. Nullam sit amet ex et mi posuere tristique.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
-            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
-            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
-            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
-            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.</p>
+      <div class="col-md-8">
+        <h2 class="spicy-rice-title color-spicy-3">Shape Your Serenity</h2>
+        <div style="margin-left: 160px;">
+          <h3>Choose what is the best for you</h3>
+          <p>Try meditation for improved focus, concentration, and cultivating positive habits.
+            With a few daily minutes, you can create a peaceful mental space. Mindfulness meditation,
+            observing thoughts without judgment, nurtures self-acceptance. Guided sessions offer
+            structured techniques to guide your focus.</p>
+          <p>Meditation fosters presence, enriching engagement in daily activities. These moments
+            of mindfulness extend self-kindness and self-connection. Integrate meditation to explore
+            personal growth with a foundation of self-awareness.</p>
+          <p>Furthermore, meditation nurtures a harmonious relationship with thoughts, reducing the pull
+            of distractions. It's a practice that encourages clarity, focus, and self-love, inviting positive habits.</p>
+        </div>
       </div>
     </div>
   </div>
+
 
 
   <%# SECTION 4 %>
   <div class="container mt-5 mb-5">
     <div class="row">
-      <div class="col-md-6 border border-secondary" style="overflow: visible">
-        <h2 class="spicy-rice-title" style="white-space: nowrap; position:absolute;">
-            Breathe, Moove, Meditation
+      <div class="col-md-6" style="overflow: visible">
+        <h2 class="spicy-rice-title color-spicy-4" style="white-space: nowrap; position:absolute;">
+            Choose Your Duration, Level, Boost
         </h2>
-        <p style="margin-top: 90px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            quis lorem ut libero malesuada feugiat. Nullam sit amet ex et mi posuere tristique.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
-            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
-            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
-            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero
-            malesuada feugiat. Nullam sit amet ex et mi posuere tristique quis lorem ipsum dat.</p>
+        <div style="margin-top: 90px;">
+          <h3>Choose what is best for you</h3>
+          <p>Engage in a truly individualized practice that caters to your unique needs and aspirations.
+            Whether you're a beginner seeking gentle guidance or an experienced practitioner craving challenges,
+            our adaptable approach ensures a rewarding experience. </p>
+          <p>By customizing each session, you'll find yourself embracing the mat with enthusiasm and anticipation.
+            The added boost further amplifies your progress, addressing areas you wish to nurture - be it flexibility,
+            strength, or mindfulness. Step onto your mat with the confidence that every breath, every posture, is
+            tailored to sculpt your path towards a more enriched and fulfilling journey.</p>
+        </div>
       </div>
-      <div class="col-md-6 border border-secondary">
-        <%= image_tag('home/image4.jpg', alt: 'Image 1', class: 'home-image') %>
+      <div class="col-md-6">
+        <%= image_tag('home/image4.jpg', alt: 'Image 1', class: 'home-image', style: 'border-radius: 20px;') %>
       </div>
     </div>
   </div>
 
+  <div class="col-md-12 d-flex justify-content-center">
+    <div class="text-center">
+      <h2 class="spicy-rice-title">Let's create your session now!</h2>
+      <br>
+      <%= link_to "Get started", new_lesson_path, class: "orange-btn" %>
+    </div>
+  </div>
 </div>
+
+
+<%# A little margin between the content and the Footer (adjust accordinly) %>
+<div style="height: 250px;"></div>
+
+
+<%# Footer %>
+<%= render "shared/footer" %>
