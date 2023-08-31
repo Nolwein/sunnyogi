@@ -1,20 +1,15 @@
 .header-section {
-  position: relative;
   height: 100vh;
   margin-top: -100px;
   background-size: cover;
   background-position: center;
-  background-image: url('/assets/home/header.jpg');
   z-index: -3;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  padding: 0 45px 125px;
 }
 
 // Bien refactor pour le Spicy Rice
 .header-section h1 {
+  max-width: 880px;
   font-size: 3rem;
   font-family: 'Spicy Rice', cursive;
   color: #FFFFFF;
@@ -27,8 +22,24 @@
 }
 
 
+// SPICY FONT + COLORS
 .spicy-rice-title {
   font-family: 'Spicy Rice', cursive;
   font-size: 70px;
+}
+
+.color-spicy-1 {
+  color: #668A6E;
+}
+
+.color-spicy-2 {
   color: #C27E62;
+}
+
+.color-spicy-3 {
+  color: #bbb271;
+}
+
+.color-spicy-4 {
+  color: #5c3cdb;
 }
