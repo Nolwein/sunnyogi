@@ -9,8 +9,8 @@ class LessonsController < ApplicationController
     @lesson = Lesson.new(lesson_params)
     @user = current_user
     @lesson.user = @user
-    @lesson.video_url = "https://www.youtube.com/embed/fhMxNjie7AE"
-    # raise
+    @lesson.video_url = "https://www.youtube.com/embed/videoseries?si=ekewy4betuNl00qf&amp;list=PLsQy3ETrPSMEeumNwo3itn_JHGado6__W"
+
 
     if @lesson.save
       redirect_to lesson_path(@lesson), notice: 'Lesson was successfuly created !'
