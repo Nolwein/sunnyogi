@@ -1,23 +1,33 @@
-<%= render "shared/card" %>
-
-
+<div class="d-flex justify-content-center align-items-center mb-0 title-lesson">
+  <div>
+    <h1>What do you want to do today?</h1>
+  </div>
+</div>
+    <div class="container mt-2">
+      <div class="row">
+        <div class=" d-flex justify-content-between">
+          <%= render "shared/card_breathing" %>
+          <%= render "shared/card_posture" %>
+          <%= render "shared/card_meditation" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
   <div class="col-md-6">
     <h1>Create a new Lesson</h1>
 
     <%= simple_form_for @lesson do |form| %>
   <%= form.input :name %>
-  <%= form.input :duration, collection: ['5min', '10min', '15min', '20min']%>
+  <%= form.input :duration, collection: ['5min', '10min', '15min', '20min', '30min', '40min', '60mim', ]%>
   <%= form.input :breathing %>
   <%= form.input :posture %>
   <%= form.input :meditation %>
   <%= form.input :level, collection: ['beginner', 'intermediate', 'advanced'] %>
   <%= form.input :boost, collection: ['Arm', 'Legs', 'Back'] %>
-
   <%= form.button :submit, "Let's start !",
       class: "green-btn mt-5 mb-2" %>
   <% end %>
-
-
   </div>
 </div>
