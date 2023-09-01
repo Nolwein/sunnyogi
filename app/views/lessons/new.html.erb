@@ -3,31 +3,66 @@
     <h1>What do you want to do today?</h1>
   </div>
 </div>
-    <div class="container mt-2">
-      <div class="row">
-        <div class=" d-flex justify-content-between">
-          <%= render "shared/card_breathing" %>
-          <%= render "shared/card_posture" %>
-          <%= render "shared/card_meditation" %>
+
+<%# Cards %>
+<%= simple_form_for @lesson do |form| %>
+  <%= form.input :name %>
+
+  <div class="container mt-2">
+    <div class=" d-flex justify-content-between pb-4">
+      <%# Card Respiration %>
+      <div class="s-card d-flex flex-column justify-content-end " style="background-image: url(<%= image_path('lesson/card1.jpg') %>);">
+        <div class="bottom-band d-flex justify-content-between align-items-center" >
+          <div>
+            <h3 class="title-card"> Breathing </h3>
+            <p class="subtitle-card"> 30s - 15min </p>
+          </div>
+          <div class = "uncheked-box">
+            <%= form.input :breathing %>
+          </div>
+        </div>
+      </div>
+
+      <%# Card Posture %>
+      <div class="s-card s-card-full d-flex flex-column justify-content-end " style="background-image: url(<%= image_path('lesson/card2.jpg') %>);">
+        <div class="bottom-band ">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <h3 class="title-card"> Posture </h3>
+              <p class="subtitle-card"> Choose your level & boost </p>
+            </div>
+
+            <div class = "uncheked-box">
+              <%= form.input :posture %>
+            </div>
+          </div>
+
+          <%# Options Level & Boost %>
+          <div class="">
+            <%= form.input :level, collection: ['beginner', 'intermediate', 'advanced'] %>
+            <%= form.input :boost, collection: ['Arm', 'Legs', 'Back'] %>
+          </div>
+        </div>
+      </div>
+
+      <%# Card Mediatation %>
+      <div class="s-card d-flex flex-column justify-content-end " style="background-image: url(<%= image_path('lesson/card3.jpg') %>);">
+        <div class="bottom-band d-flex justify-content-between align-items-center" >
+          <div>
+            <h3 class="title-card"> Meditation </h3>
+            <p class="subtitle-card"> 5mn - 20mn  </p>
+          </div>
+          <div class = "uncheked-box">
+            <%= form.input :meditation %>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
-  <div class="col-md-6">
-    <h1>Create a new Lesson</h1>
 
-    <%= simple_form_for @lesson do |form| %>
-  <%= form.input :name %>
-  <%= form.input :duration, collection: ['5min', '10min', '15min', '20min', '30min', '40min', '60mim', ]%>
-  <%= form.input :breathing %>
-  <%= form.input :posture %>
-  <%= form.input :meditation %>
-  <%= form.input :level, collection: ['beginner', 'intermediate', 'advanced'] %>
-  <%= form.input :boost, collection: ['Arm', 'Legs', 'Back'] %>
-  <%= form.button :submit, "Let's start !",
-      class: "green-btn mt-5 mb-2" %>
-  <% end %>
-  </div>
-</div>
+    <div class="pt-4">
+      <%= form.input :duration, collection: ['5min', '10min', '15min', '20min', '30min', '40min', '60mim', ]%>
+      <%= form.button :submit, "Let's start !", class: "green-btn mt-5 mb-2" %>
+    </div>
+
+<% end %>
