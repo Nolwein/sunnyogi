@@ -37,9 +37,26 @@
 }
 
 .color-spicy-3 {
-  color: #bbb271;
+  color: #F0E7A8;
 }
 
-.color-spicy-4 {
-  color: #5c3cdb;
+.custom-size-footer {
+  font-size: 44px;
+}
+
+
+
+// ELEMENTS TO MODIFY AFTER
+.custom-bold-text {
+  font-weight: bold;
+}
+
+.custom-parent-element-relative {
+  position: relative;
+}
+
+.custom-child-element-absolute {
+  position: relative;
+  top: 0px;
+  left: -250px;
 }
