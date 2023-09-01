@@ -62,7 +62,9 @@
 
     <div class="pt-4">
       <%= form.input :duration, collection: ['5min', '10min', '15min', '20min', '30min', '40min', '60mim', ]%>
-      <%= form.button :submit, "Let's start !", class: "green-btn mt-5 mb-2" %>
+        <div class="col-md-12 d-flex justify-content-center">
+          <%= form.button :submit, "Let's start !", class: "green-btn-big mb-4 mt-3" %>
+        </div>
     </div>
 
 <% end %>
