@@ -180,7 +180,7 @@ puts "Creating lessons..."
 Lesson.create!(
   user_id: User.first.id,                 # Assign other User id
   name: "Beginner Yoga Flow",
-  duration: 30,
+  duration: 20,
   breathing: true,
   posture: true,
   meditation: true,
@@ -192,7 +192,7 @@ Lesson.create!(
 Lesson.create!(
   user_id: User.first.id,                 # Assign other User id
   name: "Intermediate Meditation",
-  duration: 15,
+  duration: 30,
   breathing: true,
   posture: true,
   meditation: true,
@@ -204,7 +204,7 @@ Lesson.create!(
 Lesson.create!(
   user_id: User.first.id,                 # Assign other User id
   name: "Advanced Yoga Flow",
-  duration: 60,
+  duration: 25,
   breathing: true,
   posture: true,
   meditation: true,
@@ -217,7 +217,7 @@ Lesson.create!(
 Lesson.create!(
   user_id: User.last.id,                 # Assign other User id
   name: "Intermediate Stretching",
-  duration: 20,
+  duration: 30,
   breathing: true,
   posture: true,
   meditation: true,
@@ -226,10 +226,7 @@ Lesson.create!(
   video_url: "https://www.youtube.com/embed/_LvGTQ3Aq-g"
 )
 
-
-
 puts "Lessons created!"
-
 
 #############################################
 ################  FAVORITES  ################
@@ -258,7 +255,6 @@ Favorite.create!(
   user_id: User.last.id,                   # Assign other User id
   lesson_id: Lesson.last.id                # Assign other Lesson id
 )
-
 
 puts "--------------"
 puts "Favorites created!"
