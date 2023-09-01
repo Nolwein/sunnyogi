@@ -1,10 +1,12 @@
 // Import Google fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100&family=Noticia+Text&family=Spicy+Rice&display=swap');
+
 
 // Define fonts for body and headers
-$headers1-font: 'Spicy Rice', "cursive";
-$headers2-font : 'Encode Sans';
-$body-font: 'Noticia Text';
+$headers1-font:'Spicy Rice', cursive;
+$headers2-font : 'Encode Sans', sans-serif;
+$body-font:'Noticia Text', serif;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -15,12 +17,3 @@ $body-font: 'Noticia Text';
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
-
-
-
-
-
-
-// CUSTOM
-// Spicy rice
-@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
