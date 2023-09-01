@@ -44,3 +44,12 @@
     }
   }
 }
+.s-card-full {
+  position: relative;
+  overflow: visible;
+
+  .bottom-band{
+    position: absolute;
+    bottom: -100px;
+  }
+}
