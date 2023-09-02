@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "SunnYogi", root_path, class: "text-link" %>
+    <%= link_to "SunnYogi", root_path, class: "text-link #{'white-link' if current_page?(root_path)}" %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -10,13 +10,15 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <div class="d-flex align-items-center gap-4">
-            <li class="nav-item active">
-              <%= link_to "Get started", new_lesson_path, class: "orange-btn" %>
-            </li>
+             <% unless current_page?(root_path) %>
+              <li class="nav-item active">
+                <%= link_to "Get started", new_lesson_path, class: "orange-btn" %>
+              </li>
+              <% end %>
             <li class="nav-item dropdown">
-            <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= cl_image_tag @user.avatar.key, class: "user-avatar-navbar", alt: "User Avatar" %>
-            </a>
+              <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <%= cl_image_tag @user.avatar.key, class: "user-avatar-navbar", alt: "User Avatar" %>
+              </a>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <%= link_to "Action", "#", class: "dropdown-item" %>
                 <%= link_to "Profile", profile_path, class: "dropdown-item" %>
@@ -24,11 +26,11 @@
               </div>
             </li>
           </div>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "orange-btn" %>
-          </li>
-        <% end %>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to "Login", new_user_session_path, class: "orange-btn" %>
+            </li>
+          <% end %>
       </ul>
     </div>
   </div>
