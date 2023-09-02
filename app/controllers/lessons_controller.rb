@@ -6,6 +6,7 @@ class LessonsController < ApplicationController
   end
 
   def create
+    sleep(6)
     @lesson = Lesson.new(lesson_params)
     @user = current_user
     @lesson.user = @user
