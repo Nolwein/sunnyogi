@@ -1,167 +1,176 @@
-<%# HEADER SECTION %>
-<div class="header-section d-flex flex-column justify-content-end"
-     style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path('home/header.jpg') %>');">
-    <h1>YOUR PERSONNAL GUIDE</h1>
-    <h1>TO CONSCIOUNESS MOVEMENT</h1>
-</div>
-
-<div style="height: 40px;"></div>
-
-
-<%# CONTENT SECTION %>
-<div>
-  <%# SECTION 1 %>
-  <div class="container mt-5 mb-5">
-    <div class="row">
-      <div class="col-md-4">
-        <%= image_tag('home/image1.jpg', alt: 'Image 1', class: 'home-image', style: 'border-radius: 20px;') %>
-      </div>
-      <div class="col-md-8">
-      <%# CUSTOM ELEMENTS %>
-        <div class="custom-parent-element-relative">
-          <h2 style="width: 1200px;" class="custom-child-element-absolute spicy-rice-title color-spicy-1">
-            Breath Couture - Customize Your Exhale
-          </h2>
+<div class="homepage">
+  <div class="navbar-expand-sm navbar-light navbar-homepage">
+    <%= render "shared/navbar" %>
+  </div>
+    <%# HEADER SECTION %>
+    <div class="header-section d-flex flex-column justify-content-end"
+        style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path('home/header.jpg') %>');">
+        <h1>YOUR PERSONNAL GUIDE</h1>
+        <h1>TO MOVEMENT IN CONSCIOUSNESS</h1>
+        <div class="button-homepage">
+          <%= link_to "Get started", new_lesson_path, class: "orange-btn" %>
         </div>
-        <div style="margin-left: 160px; margin-top: 30px;">
-          <h2>Choose what is the best for you</h2>
-          <%# Custom height to fit to bottom %>
-          <div style="height: 100px;"></div>
-          <div style="text-align:justify;">
-            <p>Find breathing technique to lower stress and bring focus. They take just few
-            minutes and can be done from everywhere.</p>
-            <p>These accessible breathing techniques offer a quick respite in the midst of a
-            hectic day. As you inhale and exhale with intention, the rhythm of your breath
-            becomes an anchor, grounding you in the present moment.</p>
-            <p>One effective method is the Nadi Shodhana breathing technique. With this practice,
-            you alternate inhaling and exhaling through each nostril while using your fingers to
-            regulate airflow. This rhythmic breathwork harmonizes the left and right hemispheres
-            of the brain, promoting balance and reducing stress. Regular Nadi Shodhana practice
-            can lead to improved focus and a calmer mind. </p>
+    </div>
+
+    <div style="height: 40px;"></div>
+
+
+    <%# CONTENT SECTION %>
+    <div>
+      <%# SECTION 1 %>
+      <div class="container mt-5 mb-5">
+        <div class="row">
+          <div class="col-md-4">
+            <%= image_tag('home/image1.jpg', alt: 'Image 1', class: 'home-image', style: 'border-radius: 20px;') %>
+          </div>
+          <div class="col-md-8">
+          <%# CUSTOM ELEMENTS %>
+            <div class="custom-parent-element-relative">
+              <h2 style="width: 1200px;" class="custom-child-element-absolute spicy-rice-title color-spicy-1">
+                Breath Couture - Customize Your Exhale
+              </h2>
+            </div>
+            <div style="margin-left: 160px; margin-top: 30px;">
+              <h2>Choose what is the best for you</h2>
+              <%# Custom height to fit to bottom %>
+              <div style="height: 100px;"></div>
+              <div style="text-align:justify;">
+                <p>Find breathing technique to lower stress and bring focus. They take just few
+                minutes and can be done from everywhere.</p>
+                <p>These accessible breathing techniques offer a quick respite in the midst of a
+                hectic day. As you inhale and exhale with intention, the rhythm of your breath
+                becomes an anchor, grounding you in the present moment.</p>
+                <p>One effective method is the Nadi Shodhana breathing technique. With this practice,
+                you alternate inhaling and exhaling through each nostril while using your fingers to
+                regulate airflow. This rhythmic breathwork harmonizes the left and right hemispheres
+                of the brain, promoting balance and reducing stress. Regular Nadi Shodhana practice
+                can lead to improved focus and a calmer mind. </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div style="height: 40px;"></div>
+      <div style="height: 40px;"></div>
 
 
-  <%# SECTION 2 %>
-  <div class="container mt-5 mb-5">
-    <div class="row">
-      <div class="col-md-6" style="overflow: visible">
-        <h2 class="spicy-rice-title color-spicy-2" style="white-space: nowrap; position:absolute;">
-            Posture Play - Design Your Flow
-        </h2>
-        <div style="margin-top: 120px;">
-          <h3>Choose what is best for you</h3>
-          <%# Custom height to fit to bottom %>
-          <div style="height: 100px;"> </div>
-            <div style="text-align:justify;">
-              <p>Choose your own yoga class for body, mind, and spirit. Improve your balance, strengh
-                and flexibiliy with classes for all levels. </p>
-              <p> As you embark on this journey, consider the art of designing your yoga practice to align
-                with your goals and aspirations. Embrace a range of dynamic asanas that challenge your body
-                and invigorate your spirit, allowing you to push boundaries and discover new levels of strength.</p>
-              <p>By curating your practice with a mix of invigorating and calming postures, you'll craft a balanced
-                routine that that foster a deep mind-body connection, enhancing your mental clarity and focus. Just
-                as life is a collection of experiences, your yoga mat becomes a canvas for self-expression and growth. </p>
+      <%# SECTION 2 %>
+      <div class="container mt-5 mb-5">
+        <div class="row">
+          <div class="col-md-6" style="overflow: visible">
+            <h2 class="spicy-rice-title color-spicy-2" style="white-space: nowrap; position:absolute;">
+                Posture Play - Design Your Flow
+            </h2>
+            <div style="margin-top: 120px;">
+              <h3>Choose what is best for you</h3>
+              <%# Custom height to fit to bottom %>
+              <div style="height: 100px;"> </div>
+                <div style="text-align:justify;">
+                  <p>Choose your own yoga class for body, mind, and spirit. Improve your balance, strengh
+                    and flexibiliy with classes for all levels. </p>
+                  <p> As you embark on this journey, consider the art of designing your yoga practice to align
+                    with your goals and aspirations. Embrace a range of dynamic asanas that challenge your body
+                    and invigorate your spirit, allowing you to push boundaries and discover new levels of strength.</p>
+                  <p>By curating your practice with a mix of invigorating and calming postures, you'll craft a balanced
+                    routine that that foster a deep mind-body connection, enhancing your mental clarity and focus. Just
+                    as life is a collection of experiences, your yoga mat becomes a canvas for self-expression and growth. </p>
+                </div>
             </div>
+          </div>
+          <div class="col-md-6">
+            <%= image_tag('home/image2.jpg', alt: 'Image 1', class: 'home-image', style: 'border-radius: 20px;') %>
+          </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <%= image_tag('home/image2.jpg', alt: 'Image 1', class: 'home-image', style: 'border-radius: 20px;') %>
-      </div>
-    </div>
-  </div>
 
-  <div style="height: 40px;"></div>
+      <div style="height: 40px;"></div>
 
 
-  <%# SECTION 3 %>
-  <div class="container mt-5 mb-5">
-    <div class="row">
-      <div class="col-md-4">
-        <%= image_tag('home/image3.jpg', alt: 'Image 1', class: 'home-image', style: 'border-radius: 20px;') %>
-      </div>
-      <div class="col-md-8">
-        <%# CUSTOM ELEMENTS %>
-        <div class="custom-parent-element-relative">
-          <h2 style="width: 1200px;" class="custom-child-element-absolute spicy-rice-title color-spicy-3">
-            Meditation Map - Shape Your Serenity
-          </h2>
-        </div>
-        <div style="margin-left: 160px; margin-top: 30px;">
-          <h3>Choose what is the best for you</h3>
-          <%# Custom height to fit to bottom %>
-          <div style="height: 100px;"></div>
-            <div style="text-align:justify;">
-              <p>Try meditation for improved focus, concentration, and cultivating positive habits.
-                With a few daily minutes, you can create a peaceful mental space. Mindfulness meditation,
-                observing thoughts without judgment, nurtures self-acceptance. Guided sessions offer
-                structured techniques to guide your focus.</p>
-              <p>Meditation fosters presence, enriching engagement in daily activities. These moments
-                of mindfulness extend self-kindness and self-connection. Integrate meditation to explore
-                personal growth with a foundation of self-awareness.</p>
-              <p>Furthermore, meditation nurtures a harmonious relationship with thoughts, reducing the pull
-                of distractions. It's a practice that encourages clarity, focus, and self-love, inviting positive habits.</p>
+      <%# SECTION 3 %>
+      <div class="container mt-5 mb-5">
+        <div class="row">
+          <div class="col-md-4">
+            <%= image_tag('home/image3.jpg', alt: 'Image 1', class: 'home-image', style: 'border-radius: 20px;') %>
+          </div>
+          <div class="col-md-8">
+            <%# CUSTOM ELEMENTS %>
+            <div class="custom-parent-element-relative">
+              <h2 style="width: 1200px;" class="custom-child-element-absolute spicy-rice-title color-spicy-3">
+                Meditation Map - Shape Your Serenity
+              </h2>
             </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div style="height: 40px;"></div>
-
-
-
-  <%# SECTION 4 %>
-  <div class="container mt-5 mb-5">
-    <div class="row">
-      <div class="col-md-6" style="overflow: visible">
-        <h2 class="spicy-rice-title" style="white-space: nowrap; position:absolute;">
-            Choose Your Duration, Level, Boost
-        </h2>
-        <div style="margin-top: 130px;">
-          <h3>Choose what is best for you</h3>
-          <%# Custom height to fit to bottom %>
-          <div style="height: 120px;"></div>
-            <div style="text-align:justify;">
-              <p>Engage in a truly individualized practice that caters to your unique needs and aspirations.
-                Whether you're a beginner seeking gentle guidance or an experienced practitioner craving challenges,
-                our adaptable approach ensures a rewarding experience. </p>
-              <p>By customizing each session, you'll find yourself embracing the mat with enthusiasm and anticipation.
-                The added boost further amplifies your progress, addressing areas you wish to nurture - be it flexibility,
-                strength, or mindfulness. Step onto your mat with the confidence that every breath, every posture, is
-                tailored to sculpt your path towards a more enriched and fulfilling journey.</p>
+            <div style="margin-left: 160px; margin-top: 30px;">
+              <h3>Choose what is the best for you</h3>
+              <%# Custom height to fit to bottom %>
+              <div style="height: 100px;"></div>
+                <div style="text-align:justify;">
+                  <p>Try meditation for improved focus, concentration, and cultivating positive habits.
+                    With a few daily minutes, you can create a peaceful mental space. Mindfulness meditation,
+                    observing thoughts without judgment, nurtures self-acceptance. Guided sessions offer
+                    structured techniques to guide your focus.</p>
+                  <p>Meditation fosters presence, enriching engagement in daily activities. These moments
+                    of mindfulness extend self-kindness and self-connection. Integrate meditation to explore
+                    personal growth with a foundation of self-awareness.</p>
+                  <p>Furthermore, meditation nurtures a harmonious relationship with thoughts, reducing the pull
+                    of distractions. It's a practice that encourages clarity, focus, and self-love, inviting positive habits.</p>
+                </div>
             </div>
+          </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <%= image_tag('home/image4.jpg', alt: 'Image 1', class: 'home-image', style: 'border-radius: 20px;') %>
+
+      <div style="height: 40px;"></div>
+
+
+
+      <%# SECTION 4 %>
+      <div class="container mt-5 mb-5">
+        <div class="row">
+          <div class="col-md-6" style="overflow: visible">
+            <h2 class="spicy-rice-title" style="white-space: nowrap; position:absolute;">
+                Choose Your Duration, Level, Boost
+            </h2>
+            <div style="margin-top: 130px;">
+              <h3>Choose what is best for you</h3>
+              <%# Custom height to fit to bottom %>
+              <div style="height: 120px;"></div>
+                <div style="text-align:justify;">
+                  <p>Engage in a truly individualized practice that caters to your unique needs and aspirations.
+                    Whether you're a beginner seeking gentle guidance or an experienced practitioner craving challenges,
+                    our adaptable approach ensures a rewarding experience. </p>
+                  <p>By customizing each session, you'll find yourself embracing the mat with enthusiasm and anticipation.
+                    The added boost further amplifies your progress, addressing areas you wish to nurture - be it flexibility,
+                    strength, or mindfulness. Step onto your mat with the confidence that every breath, every posture, is
+                    tailored to sculpt your path towards a more enriched and fulfilling journey.</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <%= image_tag('home/image4.jpg', alt: 'Image 1', class: 'home-image', style: 'border-radius: 20px;') %>
+          </div>
+        </div>
+      </div>
+
+
+      <div style="height: 40px;"></div>
+
+
+      <div class="col-md-12 d-flex justify-content-center">
+        <div class="text-center">
+          <h2 class="spicy-rice-title" style="margin-top: 20px; margin-bottom: 30px;">Let's begin your journey now!</h2>
+          <br>
+          <%= link_to "Get started", new_lesson_path, class: "orange-btn" %>
+          <%= link_to "My profile", profile_path, class: "orange-btn" %>
+        </div>
       </div>
     </div>
-  </div>
 
 
-  <div style="height: 40px;"></div>
+    <%# A little margin between the content and the Footer (adjust accordinly) %>
+    <div style="height: 250px;"></div>
 
 
-  <div class="col-md-12 d-flex justify-content-center">
-    <div class="text-center">
-      <h2 class="spicy-rice-title" style="margin-top: 20px; margin-bottom: 30px;">Let's begin your journey now!</h2>
-      <br>
-      <%= link_to "Get started", new_lesson_path, class: "orange-btn" %>
-      <%= link_to "My profile", profile_path, class: "orange-btn" %>
-    </div>
+    <%# Footer %>
+    <%= render "shared/footer" %>
   </div>
 </div>
-
-
-<%# A little margin between the content and the Footer (adjust accordinly) %>
-<div style="height: 250px;"></div>
-
-
-<%# Footer %>
-<%= render "shared/footer" %>
