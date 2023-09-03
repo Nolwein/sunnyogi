@@ -19,8 +19,8 @@
               <h3 class="title-card"> Breathing </h3>
               <p class="subtitle-card"> 30s - 15min </p>
             </div>
-            <div class = "uncheked-box">
-              <%= form.input :breathing, as: :check_boxes %>
+            <div class = "uncheked-box ">
+              <%= form.input :breathing, as: :check_boxes; %>
             </div>
           </div>
         </div>
@@ -34,8 +34,9 @@
                 <p class="subtitle-card"> Choose your level & boost </p>
               </div>
 
-              <div class = "uncheked-box">
-                <%= form.input :posture, as: :check_boxes%>
+              <div class = "tag-item-posture">
+                <%= form.input :posture, as: :check_boxes, input_html: { class: "tag-selector-posture" } %>
+                <label for="posture" class="checkbox-label"></label>
               </div>
             </div>
 
