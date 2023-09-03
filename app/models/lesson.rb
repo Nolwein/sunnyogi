@@ -5,6 +5,7 @@ class Lesson < ApplicationRecord
 
   has_one_attached :miniature
 
+  
 
   validates :name, presence: true, uniqueness: true
   # validates :duration, lenght: { minimum: 1 }

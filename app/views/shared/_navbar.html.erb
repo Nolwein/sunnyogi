@@ -12,6 +12,7 @@
           <div class="d-flex align-items-center gap-4">
             <% unless current_page?(root_path) %>
               <li class="nav-item active">
+                <%# class="nav-item active" data-controller="scroll-button" data-scroll-button-target="button" %>
                 <%= link_to "Get started", new_lesson_path, class: "orange-btn" %>
               </li>
               <% end %>
