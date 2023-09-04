@@ -131,7 +131,7 @@ Lesson.create!(
 
 Lesson.create!(
   user_id: User.first.id,                 # Assign other User id
-  name: "Yoga for Neck and Shoulder Relief",
+  name: "Yoga for Neck & Shoulder",
   duration: 20,
   breathing: true,
   posture: true,
@@ -193,7 +193,7 @@ Lesson.create!(
 
 Lesson.create!(
   user_id: User.first.id,                 # Assign other User id
-  name: "Yoga For Low Back and Hamstrings",
+  name: "Yoga For Low Back",
   duration: 30,
   breathing: true,
   posture: true,
@@ -217,7 +217,7 @@ Lesson.create!(
 
 Lesson.create!(
   user_id: User.first.id,                 # Assign other User id
-  name: "Advanced Hold & Flow Yoga Class",
+  name: "Advanced Yoga Class",
   duration: 60,
   breathing: true,
   posture: true,
