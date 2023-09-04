@@ -28,28 +28,16 @@
                 <span class="custom-subtext-card">
                   <%= favorite.lesson.created_at.strftime('%d %b') %> -
                   <%# LE BOLD VEUT PAS MARCHER... %>
-                  <span class="custom-subtext-card"><%= favorite.lesson.duration %> min</span>
-              </div>
-              <div class="card-bottom-right-div">
-                <i class="fa-solid fa-heart fa-xl" style="color: #668A6E;"></i>
-              </div>
-              <div class="card-bottom-right-trash">
-                <%= button_to favorite_path(favorite), method: :delete, form_class: 'delete-alertbox' do %>
-                  <i class="fa-solid fa-trash fa-xs" style="color: #c94f4f;"></i>
-                <% end %>
-              <iframe width="350" height="250" src="<%= favorite.lesson.video_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="false"></iframe>
-              <div class="card-bottom-main-div">
-                <div class="card-bottom-left-div">
-                  <span class="title-card-profile" ><%= link_to favorite.lesson.name, lesson_path(favorite.lesson) %> </span>
-                  <br>
-                  <span class="custom-subtext-card">
-                    <%= favorite.lesson.created_at.strftime('%d %b') %> -
-                    <%# LE BOLD VEUT PAS MARCHER... %>
                     <span class="custom-subtext-card"><%= favorite.lesson.duration %> min</span>
                   </span>
                 </div>
                 <div class="card-bottom-right-div">
                   <i class="fa-regular fa-heart fa-xl" style="color: #668A6E;"></i>
+                </div>
+                <div class="card-bottom-right-trash">
+                  <%= button_to favorite_path(favorite), method: :delete, form_class: 'delete-alertbox', class: 'd-inline' do %>
+                    <i class="fa-solid fa-trash" style="color: #c94f4f;"></i>
+                  <% end %>
                 </div>
               </div>
           </div>
@@ -57,7 +45,6 @@
       </div>
     </div>
   </div>
-
 
 
   <br>
@@ -92,8 +79,8 @@
        </div>
     </div>
   </div>
-      
-      
+
+
   <div class="mt-4 mb-4">
     <%= link_to "Go back to HOME", root_path, class: "green-btn" %>
   </div>
