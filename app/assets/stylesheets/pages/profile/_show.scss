@@ -167,6 +167,7 @@
 
 
 
+// BIEN MERGER AVEC S-CARD:
 
 .custom-subtext-card {
   font-weight: bold;
@@ -178,13 +179,6 @@
 }
 
 
-
-
-
-
-
-
-// CUSTOM DIVS
 .card-bottom-main-div {
   display: flex;
   position: absolute;           // relative: s-card (_card.scss)
@@ -196,7 +190,6 @@
   overflow: hidden;
   padding: 20px;
 }
-
 
 .card-bottom-left-div {
   flex: 80%;
@@ -211,4 +204,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+.card-bottom-right-trash {
+  flex: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+// SCROLLING
+.scrolling-wrapper {
+  overflow-x: auto;
+}
+
+.scrolling-row {
+  overflow: visible;
+}
+
+.col-5 {
+  width: 20%;
 }

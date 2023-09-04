@@ -14,10 +14,29 @@
   <!-- FAVORITES -->
   <div>
     <h3> FAVORITES :</h3>
-    <div class="container d-flex justify-content-between">
-      <div class="d-flex justify-content-between pb-4">
+    <div class="container-fluid">
+      <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2">
         <% @favorites.each do |favorite| %>
           <div class="s-card d-flex flex-column justify-content-end">
+            <div style="pointer-events: none; cursor: default;">
+              <iframe width="350" height="250" src="<%= favorite.lesson.video_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="card-bottom-main-div">
+              <div class="card-bottom-left-div">
+                <span class="title-card-profile" ><%= link_to favorite.lesson.name, lesson_path(favorite.lesson) %> </span>
+                <br>
+                <span class="custom-subtext-card">
+                  <%= favorite.lesson.created_at.strftime('%d %b') %> -
+                  <%# LE BOLD VEUT PAS MARCHER... %>
+                  <span class="custom-subtext-card"><%= favorite.lesson.duration %> min</span>
+              </div>
+              <div class="card-bottom-right-div">
+                <i class="fa-solid fa-heart fa-xl" style="color: #668A6E;"></i>
+              </div>
+              <div class="card-bottom-right-trash">
+                <%= button_to favorite_path(favorite), method: :delete, form_class: 'delete-alertbox' do %>
+                  <i class="fa-solid fa-trash fa-xs" style="color: #c94f4f;"></i>
+                <% end %>
               <iframe width="350" height="250" src="<%= favorite.lesson.video_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="false"></iframe>
               <div class="card-bottom-main-div">
                 <div class="card-bottom-left-div">
@@ -39,35 +58,42 @@
     </div>
   </div>
 
+
+
   <br>
+
   <!-- HISTORY -->
   <div>
-    <h3>HISTORY :</h3>
-    <div class="container d-flex justify-content-between">
-      <div class="d-flex justify-content-between pb-4">
-        <% @lessons.each do |lesson| %>
-          <div class="s-card d-flex flex-column justify-content-end">
-            <iframe width="350" height="250" src="<%= lesson.video_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <div class="card-bottom-main-div">
-              <div class="card-bottom-left-div">
-                <span class="title-card-profile" ><%= link_to lesson.name, lesson_path(lesson) %> </span>
-                <br>
-                <span class="custom-subtext-card">
-                  <%= lesson.created_at.strftime('%d %b') %> -
-                  <%# LE CUSTOM BOLD VEUT PAS MARCHER... %>
-                  <span class="custom-subtext-card"><%= lesson.duration %> min</span>
-                </span>
-              </div>
-              <div class="card-bottom-right-div">
-                <i class="fa-solid fa-heart fa-xl" style="color: #668A6E;"></i>
+    <h3>HISTORY:</h3>
+    <div class="container-fluid">
+      <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2">
+          <% @lessons.each do |lesson| %>
+            <div class="s-card d-flex flex-column justify-content-end">
+            <div style="pointer-events: none; cursor: default;">
+              <iframe width="350" height="250" src="<%= lesson.video_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+              <div class="card-bottom-main-div">
+                <div class="card-bottom-left-div">
+                  <span class="title-card-profile" ><%= link_to lesson.name, lesson_path(lesson) %> </span>
+                  <br>
+                  <span class="custom-subtext-card">
+                    <%= lesson.created_at.strftime('%d %b') %> -
+                    <%# LE CUSTOM BOLD VEUT PAS MARCHER... %>
+                    <span class="custom-subtext-card"><%= lesson.duration %> min</span>
+                  </span>
+                </div>
+                <div class="card-bottom-right-div">
+                  <i class="fa-regular fa-heart fa-xl" style="color: #668A6E;"></i>
+                </div>
               </div>
             </div>
-          </div>
-        <% end %>
-      </div>
+          <% end %>
+        </div>
+       </div>
     </div>
   </div>
-
+      
+      
   <div class="mt-4 mb-4">
     <%= link_to "Go back to HOME", root_path, class: "green-btn" %>
   </div>
