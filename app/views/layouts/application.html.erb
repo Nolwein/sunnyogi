@@ -26,6 +26,7 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css">
   </head>
 
   <body>
@@ -36,4 +37,5 @@
     <%= render "shared/flashes" %>
     <%= yield %>
   </body>
+  <%= javascript_include_tag "delete_confirmation_dialog" %>
 </html>
