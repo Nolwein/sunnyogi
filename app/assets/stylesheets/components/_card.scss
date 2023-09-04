@@ -15,10 +15,11 @@
     // box-shadow: inset 0 0 0 3000px rgba(150, 150, 150, 0.192);
     // backdrop-filter: blur(10px);
     fill: rgba(255, 252, 237, 0.37);
-    backdrop-filter: blur(27.5px);
+    backdrop-filter: blur(60px);
     border-radius: 30px;
     overflow: hidden;
     padding: 20px;
+
 
     .title-card {
       font-family:'Encode Sans';
@@ -48,10 +49,23 @@
 }
 .s-card-full {
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 
   .bottom-band{
     position: absolute;
     bottom: -100px;
+  }
+}
+
+.s-card-posture {
+  .bottom-band {
+    position: absolute;
+    bottom: -155px;
+    transition: .3s ease-in-out;
+  }
+
+  &:hover .bottom-band {
+    bottom: 0;
+    transition: .3s ease-in-out;
   }
 }
