@@ -6,69 +6,81 @@
       </div>
     </div>
 
-    <%# Cards %>
-    <%= simple_form_for @lesson do |form| %>
-      <%= form.input :name %>
+<%# Cards %>
 
-      <div class="container mt-2">
-        <div class=" d-flex justify-content-between pb-4">
-          <%# Card Respiration %>
-          <div class="s-card d-flex flex-column justify-content-end " style="background-image: url(<%= image_path('lesson/card1.jpg') %>);">
-            <div class="bottom-band d-flex justify-content-between align-items-center" >
-              <div>
-                <h3 class="title-card"> Breathing </h3>
-                <p class="subtitle-card"> 30s - 15min </p>
-              </div>
-              <div class = "uncheked-box">
-                <%= form.input :breathing %>
-              </div>
+<div>
+  <%= simple_form_for @lesson do |form| %>
+    <%= form.input :name %>
+
+    <div class="container mt-2">
+      <div class=" d-flex justify-content-between pb-4">
+        <%# Card Respiration %>
+        <div class="s-card d-flex flex-column justify-content-end " style="background-image: url(<%= image_path('lesson/card1.jpg') %>);">
+          <div class="bottom-band d-flex justify-content-between align-items-center" >
+            <div>
+              <h3 class="title-card"> Breathing </h3>
+              <p class="subtitle-card"> 30s - 15min </p>
+            </div>
+            <div class = "uncheked-box ">
+              <%= form.input :breathing, as: :check_boxes; %>
             </div>
           </div>
+        </div>
 
-          <%# Card Posture %>
-          <div class="s-card s-card-full d-flex flex-column justify-content-end " style="background-image: url(<%= image_path('lesson/card2.jpg') %>);">
-            <div class="bottom-band ">
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <h3 class="title-card"> Posture </h3>
-                  <p class="subtitle-card"> Choose your level & boost </p>
-                </div>
-
-                <div class = "uncheked-box">
-                  <%= form.input :posture %>
-                </div>
+        <%# Card Posture %>
+        <div class="s-card s-card-full d-flex flex-column justify-content-end " style="background-image: url(<%= image_path('lesson/card2.jpg') %>);">
+          <div class="bottom-band ">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h3 class="title-card"> Posture </h3>
+                <p class="subtitle-card"> Choose your level & boost </p>
               </div>
 
-              <%# Options Level & Boost %>
-              <div class="">
-                <%= form.input :level, collection: ['beginner', 'intermediate', 'advanced'] %>
-                <%= form.input :boost, collection: ['Arm', 'Legs', 'Back'] %>
+              <div class = "tag-item-posture">
+                <%= form.input :posture, as: :check_boxes, input_html: { class: "tag-selector-posture" } %>
+                <label for="posture" class="checkbox-label"></label>
               </div>
             </div>
-          </div>
 
-          <%# Card Mediatation %>
-          <div class="s-card d-flex flex-column justify-content-end " style="background-image: url(<%= image_path('lesson/card3.jpg') %>);">
-            <div class="bottom-band d-flex justify-content-between align-items-center" >
-              <div>
-                <h3 class="title-card"> Meditation </h3>
-                <p class="subtitle-card"> 5mn - 20mn  </p>
+            <%# Options Level & Boost %>
+            <div class="">
+              <div class="tag-item-level">
+                <%= form.input :level,
+                as: :radio_buttons,  collection: ['beginner', 'intermediate', 'advanced'],
+                input_html: { class: "tag-selector-level"} %>
               </div>
-              <div class = "uncheked-box">
-                <%= form.input :meditation %>
+              <div class="tag-item-target">
+                <%= form.input :boost,
+                as: :radio_buttons, collection: ['Neck and Shoulder','Chest', 'Harmstring', 'Hip Flexor', 'Backbend', 'Twist'],
+                input_html: { class: "tag-selector-target"} %>
               </div>
             </div>
           </div>
         </div>
+        
+        <%# Card Mediatation %>
+        <div class="s-card d-flex flex-column justify-content-end " style="background-image: url(<%= image_path('lesson/card3.jpg') %>);">
+          <div class="bottom-band d-flex justify-content-between align-items-center" >
+            <div>
+              <h3 class="title-card"> Meditation </h3>
+              <p class="subtitle-card"> 5mn - 20mn  </p>
+            </div>
+            <div class = "uncheked-box">
+              <%= form.input :meditation, as: :check_boxes %>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+      <div class="pt-4">
+        <%= form.input :duration, collection: ['5min', '10min', '15min', '20min', '30min', '40min', '60mim', ]%>
+          <div class="col-md-12 d-flex justify-content-center">
+            <%= form.button :submit, "Let's start !", class: "green-btn-big mb-4 mt-3" %>
+          </div>
       </div>
-
-        <div class="pt-4">
-          <%= form.input :duration, collection: ['5min', '10min', '15min', '20min', '30min', '40min', '60mim', ]%>
-            <div class="col-md-12 d-flex justify-content-center">
-              <%= form.button :submit, "Let's start !", class: "green-btn-big mb-4 mt-3", data: {action: "click->loader#hideTargets click->loader#showTargets" }%>
-            </div>
-        </div>
-    <% end %>
+    </div>
+  <% end %>
   </div>
   <div data-loader-target="hideable" hidden class="position-fixed w-100 h-100" style="background-color: rgba(230, 126, 0.13);">
     <div class="cs-loader">
@@ -84,4 +96,3 @@
       </div>
     </div>
   </div>
-</div>

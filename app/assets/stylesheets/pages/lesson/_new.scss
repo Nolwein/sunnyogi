@@ -4,3 +4,95 @@
   font-size: 48px;
   font-weight: 400;
 }
+
+
+//Checkbox posture//
+
+
+
+
+// level //
+
+.tag-item-level {
+  .level {
+    display: inline-block;
+    justify-content: space-between;
+  }
+
+  .form-check {
+    padding-left: 0%;
+  }
+
+  .form-check-label {
+    color: #5AA4A4;
+  }
+
+}
+
+.tag-selector-level {
+  position: absolute;
+  transform: scale(0);
+}
+
+.tag-selector-level + label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.7rem;
+  border-radius: 50rem;
+  padding: 0.1rem 0.5rem;
+  background-color: rgb(248, 248, 248);
+  color: #5AA4A4;
+  border: 1px solid #5AA4A4;
+  margin-bottom: 0.4rem;
+  min-width: 75px;
+  height: 22px;
+  text-align: center;
+}
+
+.tag-selector-target:checked + label {
+  background-color: #5AA4A4;
+  color: white;
+}
+
+// Boost//
+
+.tag-item-boost {
+  .target {
+    display: inline-block;
+    justify-content: space-between;
+  }
+
+  .form-check {
+    padding-left: 0%;
+  }
+
+  .form-check-label {
+    color: #5AA4A4;
+  }
+
+}
+
+.tag-selector-target {
+  position: absolute;
+  transform: scale(0);
+}
+
+.tag-selector-target + label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.7rem;
+  border-radius: 50rem;
+  padding: 0.1rem 0.5rem;
+  background-color: rgb(248, 248, 248);
+  color: #5AA4A4;
+  border: 1px solid #5AA4A4;
+  margin-bottom: 0.4rem;
+  min-width: 75px;
+  height: 22px;
+  text-align: center;
+}
+
+.tag-selector-target:checked + label {
+  background-color: #5AA4A4;
+  color: white;
+}
