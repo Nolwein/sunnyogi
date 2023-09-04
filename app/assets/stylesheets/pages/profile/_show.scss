@@ -56,6 +56,25 @@
 
 
 
+.title-card-profile {
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 // @media (max-width: 1000px) {
 //   .reservations-grid {
@@ -142,3 +161,54 @@
 //   height: auto;
 //   display: block;
 // }
+
+
+
+
+
+
+
+.custom-subtext-card {
+  font-weight: bold;
+  font-family: 'Poppins';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+
+
+
+
+
+
+// CUSTOM DIVS
+.card-bottom-main-div {
+  display: flex;
+  position: absolute;           // relative: s-card (_card.scss)
+  bottom: 0;
+  width: 100%;
+  fill: rgba(255, 252, 237, 0.37);
+  backdrop-filter: blur(27.5px);
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+
+.card-bottom-left-div {
+  flex: 80%;
+}
+
+.card-bottom-right-div {
+  flex: 10%;
+  background-color: white;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

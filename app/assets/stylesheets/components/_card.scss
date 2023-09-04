@@ -1,11 +1,13 @@
 .s-card {
   width: 339px;
   height: 258px;
+  margin-right: 20px;
   border-radius: 30px;
   margin-bottom: 29px;
   background-size: cover;
   background-position: center 59%;
   overflow: hidden;
+  position: relative;
 
   .bottom-band {
     width: 100%;

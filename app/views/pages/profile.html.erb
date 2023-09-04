@@ -14,21 +14,23 @@
   <!-- FAVORITES -->
   <div>
     <h3> FAVORITES :</h3>
-    <div class="container d-flex  justify-content-between">
-      <div class=" d-flex justify-content-between pb-4">
+    <div class="container d-flex justify-content-between">
+      <div class="d-flex justify-content-between pb-4">
         <% @favorites.each do |favorite| %>
           <div class="s-card d-flex flex-column justify-content-end">
             <iframe width="350" height="250" src="<%= favorite.lesson.video_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <div class="bottom-band d-flex justify-content-between align-items-center" >
-              <h3 class="title-card" ><%= link_to favorite.lesson.name, lesson_path(favorite.lesson) %> </h3>
-                <div class="subtitle-card">
-                  <i class="fa-solid fa-clock" style="color: #5c5c5c;"></i> <%= favorite.lesson.duration %>
-                  <i class="fa-solid fa-layer-group" style="color: #5c5c5c;"></i> <%= favorite.lesson.level %>
-                  <i class="fa-solid fa-bolt" style="color: #5c5c5c;"></i> <%= favorite.lesson.boost %>
-                  <%= link_to favorite_path(favorite), data: { turbo_method: 'delete', turbo_confirm: 'Are you sure ?' } do %>
-                  <i class="fa-solid fa-trash" style="color: #ea0b0b;"></i>
-                  <% end %>
-                </div>
+            <div class="card-bottom-main-div">
+              <div class="card-bottom-left-div">
+                <span class="title-card-profile" ><%= link_to favorite.lesson.name, lesson_path(favorite.lesson) %> </span>
+                <br>
+                <span class="custom-subtext-card">
+                  <%= favorite.lesson.created_at.strftime('%d %b') %> -
+                  <%# LE BOLD VEUT PAS MARCHER... %>
+                  <span class="custom-subtext-card"><%= favorite.lesson.duration %> min</span>
+                </span>
+              </div>
+              <div class="card-bottom-right-div">
+                <i class="fa-regular fa-heart fa-xl" style="color: #668A6E;"></i>
               </div>
             </div>
           </div>
@@ -44,20 +46,20 @@
     <div class="container d-flex justify-content-between">
       <div class="d-flex justify-content-between pb-4">
         <% @lessons.each do |lesson| %>
-          <div class="s-card d-flex flex-column justify-content-end lesson-card ">
+          <div class="s-card d-flex flex-column justify-content-end">
             <iframe width="350" height="250" src="<%= lesson.video_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <div class="bottom-band d-flex justify-content-between align-items-center">
-              <h3 class="title-card"><%= link_to lesson.name, lesson_path(lesson) %></h3>
-              <div class="subtitle-card">
-                <i class="fa-solid fa-clock" style="color: #5c5c5c;"></i> <%= lesson.duration %>
-                <i class="fa-solid fa-layer-group" style="color: #5c5c5c;"></i> <%= lesson.level %>
-                <i class="fa-solid fa-bolt" style="color: #5c5c5c;"></i> <%= lesson.boost %>
-                <%= link_to lesson_favorites_path(lesson), data: { turbo_method: :post } do %>
-                  <i class="fa-regular fa-heart fa-2xl" style="color: #668a6e;"></i>
-                <% end %>
-                <%= link_to lesson_path(lesson), data: { turbo_method: 'delete', turbo_confirm: 'Are you sure ?' } do %>
-                  <i class="fa-solid fa-trash" style="color: #ea0b0b;"></i>
-                <% end %>
+            <div class="card-bottom-main-div">
+              <div class="card-bottom-left-div">
+                <span class="title-card-profile" ><%= link_to lesson.name, lesson_path(lesson) %> </span>
+                <br>
+                <span class="custom-subtext-card">
+                  <%= lesson.created_at.strftime('%d %b') %> -
+                  <%# LE CUSTOM BOLD VEUT PAS MARCHER... %>
+                  <span class="custom-subtext-card"><%= lesson.duration %> min</span>
+                </span>
+              </div>
+              <div class="card-bottom-right-div">
+                <i class="fa-solid fa-heart fa-xl" style="color: #668A6E;"></i>
               </div>
             </div>
           </div>
