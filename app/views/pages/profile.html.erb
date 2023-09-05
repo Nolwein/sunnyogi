@@ -32,11 +32,8 @@
                   </span>
                 </div>
                 <div class="card-bottom-right-div">
-                  <i class="fa-regular fa-heart fa-xl" style="color: #668A6E;"></i>
-                </div>
-                <div class="card-bottom-right-trash">
-                  <%= button_to favorite_path(favorite), method: :delete, form_class: 'delete-alertbox', class: 'd-inline' do %>
-                    <i class="fa-solid fa-trash" style="color: #c94f4f;"></i>
+                  <%= button_to favorite_path(favorite), method: :delete, form_class: 'delete-alertbox', class: 'd-inline', class: 'no-border-sweet-alert' do %>
+                    <i class="fa-solid fa-heart fa-xl" style="color: #668A6E;"></i>
                   <% end %>
                 </div>
               </div>
@@ -69,19 +66,16 @@
                     <span class="custom-subtext-card"><%= lesson.duration %> min</span>
                   </span>
                 </div>
-                <div class="card-bottom-right-div">
-                  <i class="fa-regular fa-heart fa-xl" style="color: #668A6E;"></i>
-                </div>
               </div>
             </div>
           <% end %>
         </div>
-       </div>
+      </div>
     </div>
   </div>
 
 
-  <div class="mt-4 mb-4">
+  <div class="container mt-4 mb-3">
     <%= link_to "Go back to HOME", root_path, class: "green-btn" %>
   </div>
 </div>
