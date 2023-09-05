@@ -13,22 +13,35 @@ label[for="lesson_name"] {
   justify-content: center;
 }
 
+#lesson_name::placeholder {
+  font-family: Spicy Rice;
+  font-size: 15px;
+}
+.tag-selector-name {
+  font-family: Spicy Rice;
+  padding: 10px;
+  border: 3px solid #5AA4A4;
+  border-radius: 6px;
+}
+.s-cards-container {
+  gap: 20px;
+}
+
 //checkbox breathing, posture, meditation//
 
+//unchecked box//
 .tag-selector-checkbox + label {
   width: 46px;
   height: 46px;
   background-color: white;
   border-radius: 10px;
   color: transparent;
-}
-
-.tag-selector-checkbox:checked + label {
-  background-color: #5AA4A4;
   position: relative;
+  cursor: pointer;
 }
-.tag-selector-checkbox:checked + label:after {
-  color: white;
+//l'icone qu'on insert//
+.tag-selector-checkbox + label:after {
+  color: rgba(90, 164, 164, .3);
   content: "\f00c";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -40,8 +53,22 @@ label[for="lesson_name"] {
   width: 46px;
   inset: 0;
 }
+
+//checked box//
+.tag-selector-checkbox:checked + label {
+  background-color: #5AA4A4;
+}
+.tag-selector-checkbox:checked + label:after {
+  color: white;
+}
+
 .tag-item-checkbox fieldset {
   margin-bottom: 0 !important;
+
+  .form-check {
+    margin: 0;
+    padding: 0;
+  }
 }
 .tag-selector-checkbox {
   position: absolute;
@@ -185,11 +212,10 @@ label[for="lesson_name"] {
   border: 4px solid #5AA4A4;
   margin-bottom: 0.4rem;
   margin-right: 10px;
-  min-width: 75px;
   text-align: center;
   width: 156px;
   height: 73px;
-  line-height: 90px;
+  line-height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
