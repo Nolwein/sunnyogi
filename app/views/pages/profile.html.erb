@@ -32,7 +32,9 @@
                   </span>
                 </div>
                 <div class="card-bottom-right-div">
-                  <i class="fa-regular fa-heart fa-xl" style="color: #668A6E;"></i>
+                  <%= button_to favorite_path(favorite), method: :delete, form_class: 'delete-alertbox', class: 'd-inline', class: 'no-border-sweet-alert' do %>
+                    <i class="fa-solid fa-heart fa-xl" style="color: #668A6E;"></i>
+                  <% end %>
                 </div>
               </div>
           </div>
