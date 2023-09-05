@@ -6,10 +6,10 @@
 
   <div class="d-flex justify-content-between">
     <h1 class="lesson-title"><%= @lesson.name  %></h1>
-    <div class="mt-2">
+    <div class="mt-2 px-3">
       <%= link_to "My History", profile_path, class: "green-btn" %>
       <%= link_to lesson_favorites_path(@lesson), data: {turbo_method: :post} do %>
-        <i class="fa-regular fa-heart fa-2xl" style="color: #668a6e;"></i>
+      <i class="fa-regular fa-heart fa-2xl ms-3" style="color: #668a6e;"></i>
       <%end%>
     </div>
   </div>
@@ -19,4 +19,3 @@
       <p class="lesson-info pe-4"><i class="fa-solid fa-bolt" style="color: #5c5c5c;">  </i> <%= @lesson.boost %></p>
     </div>
 </div>
-

@@ -1,6 +1,6 @@
 .green-btn {
   background-color: #668a6e;
-  padding: 10px 15px;
+  padding: 14px 22px;
   text-decoration: none;
   color: white;
   border: none;
@@ -8,16 +8,20 @@
   cursor: pointer;
 }
 
-.green-btn-big {
-  background-color: #668a6e;
-  padding: 15px 150px;
-  font-size: 36px;
+.pink-btn-big {
+  background-color:  #C27E62;
+  padding: 10px 90px;
+  font-size: 24px;
   font-family: 'Spicy Rice', 'cursive';
   margin-top: auto;
   margin-bottom: auto;
   text-decoration: none;
-  color: white;
+  color: #FEFEEB;
   border: none;
   border-radius: 20px;
   cursor: pointer;
+}
+
+.pink-btn-big:hover{
+  color:  #C27E62;
 }
