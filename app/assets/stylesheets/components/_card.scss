@@ -20,7 +20,7 @@
   }
 
   &:hover .tag-selector-checkbox + label:after {
-    color: rgba(90, 164, 164, .6);
+    color: rgba(90, 164, 164, .9);
     transition: .3s ease-in-out;
   }
   &:hover .tag-selector-checkbox:checked + label:after {
