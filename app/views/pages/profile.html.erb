@@ -54,29 +54,25 @@
     <h3>HISTORY:</h3>
     <div class="container-fluid">
       <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2">
-          <% @lessons.each do |lesson| %>
-            <div class="s-card d-flex flex-column justify-content-end">
-            <div style="pointer-events: none; cursor: default;">
-              <iframe width="350" height="250" src="<%= lesson.video_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-              <div class="card-bottom-main-div">
-                <div class="card-bottom-left-div">
-                  <span class="title-card-profile" ><%= link_to lesson.name, lesson_path(lesson) %> </span>
-                  <br>
-                  <span class="custom-subtext-card">
-                    <%= lesson.created_at.strftime('%d %b') %> -
-                    <%# LE CUSTOM BOLD VEUT PAS MARCHER... %>
-                    <span class="custom-subtext-card"><%= lesson.duration %> min</span>
-                  </span>
-                </div>
-                <div class="card-bottom-right-div">
-                  <i class="fa-regular fa-heart fa-xl" style="color: #668A6E;"></i>
-                </div>
+        <% @lessons.each do |lesson| %>
+          <div class="s-card d-flex flex-column justify-content-end">
+          <div style="pointer-events: none; cursor: default;">
+            <iframe width="350" height="250" src="<%= lesson.video_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+            <div class="card-bottom-main-div">
+              <div class="card-bottom-left-div">
+                <span class="title-card-profile" ><%= link_to lesson.name, lesson_path(lesson) %> </span>
+                <br>
+                <span class="custom-subtext-card">
+                  <%= lesson.created_at.strftime('%d %b') %> -
+                  <%# LE CUSTOM BOLD VEUT PAS MARCHER... %>
+                  <span class="custom-subtext-card"><%= lesson.duration %> min</span>
+                </span>
               </div>
             </div>
-          <% end %>
-        </div>
-       </div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 
