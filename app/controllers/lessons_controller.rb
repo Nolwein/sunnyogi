@@ -12,8 +12,6 @@ class LessonsController < ApplicationController
     @user = current_user
     @lesson.user = @user
     @lesson.video_url = "https://www.youtube.com/embed/videoseries?si=ekewy4betuNl00qf&amp;list=PLsQy3ETrPSMEeumNwo3itn_JHGado6__W"
-    url = @lesson.video_url
-    youtube_miniature
 
     if @lesson.save
       redirect_to lesson_path(@lesson), notice: 'Lesson was successfuly created !'
