@@ -28,12 +28,12 @@
             </li>
           </div>
           <% else %>
-            <li class="nav-item">
+            <div class="nav-item">
+              <%= link_to "Get started", new_lesson_path, class: "orange-btn", id: "scrollButton"  %>
               <%= link_to "Login", new_user_session_path, class: "orange-btn" %>
-            </li>
+            </div>
           <% end %>
       </ul>
     </div>
-    <button id="scrollButton" class="scroll-button" style="display: none;">Get started</button>
   </div>
 </div>
