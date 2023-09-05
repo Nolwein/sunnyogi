@@ -11,9 +11,6 @@ export default class extends Controller {
     this.hideableTargets.forEach(el => {
       el.hidden = false
     });
-  }
-
-  hideTargets() {
     this.visibleTargets.forEach(el => {
       el.hidden = true
     });
