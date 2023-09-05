@@ -224,6 +224,11 @@
 // SCROLLING
 .scrolling-wrapper {
   overflow-x: auto;
+  gap: 20px;
+
+  .s-card {
+    flex: 1 0 445px;
+  }
 }
 
 .scrolling-row {
