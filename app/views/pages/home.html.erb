@@ -2,6 +2,38 @@
   <div class="navbar-expand-sm navbar-light navbar-homepage">
     <%= render "shared/navbar" %>
   </div>
+  <%# SCRIPT FOR THE NAVBAR %>
+<script>
+  $(document).ready(function () {
+    var $navbar = $('.navbar-homepage');
+    var scrollThreshold = 680;
+
+    $(window).on('scroll', function () {
+      if ($(this).scrollTop() > scrollThreshold) {
+        $navbar.addClass('navbar-scrolled');
+      } else {
+        $navbar.removeClass('navbar-scrolled');
+      }
+
+      // Show/hide the button based on scroll position
+      if ($(this).scrollTop() > scrollThreshold) {
+        $("#scrollButton").show();
+      } else {
+        $("#scrollButton").hide();
+      }
+    });
+
+    // Redirect to new lesson page when the button is clicked
+    $("#scrollButton").on("click", function() {
+      window.location.href = "<%= new_lesson_path %>";
+    });
+  });
+</script>
+
+
+
+
+
     <%# HEADER SECTION %>
     <div class="header-section d-flex flex-column justify-content-end"
         style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path('home/header.jpg') %>');">
