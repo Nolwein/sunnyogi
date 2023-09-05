@@ -8,6 +8,16 @@
   position: relative;
   transition: .3s ease-in-out;
 
+  .s-card-media {
+    pointer-events: none;
+    cursor: default;
+    width: 100%;
+    height: 100%;
+
+    iframe {
+      width: 100%;
+    }
+  }
 
   &:hover .tag-selector-checkbox + label:after {
     color: rgba(90, 164, 164, .6);
@@ -36,7 +46,7 @@
     .title-card {
       font-family:'Encode Sans';
       color: #000;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: bold;
       font-weight: 700;
       line-height: normal;
@@ -45,7 +55,7 @@
     .subtitle-card {
       color: #000;
       font-family: 'Poppins';
-      font-size: 11px;
+      font-size: 14px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
