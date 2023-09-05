@@ -9,10 +9,10 @@ export default class extends Controller {
 
   showTargets() {
     this.hideableTargets.forEach(el => {
-      el.hidden = false
+      el.classList.remove('d-none');
     });
     this.visibleTargets.forEach(el => {
-      el.hidden = true
+      el.classList.add('d-none');
     });
   }
 }
