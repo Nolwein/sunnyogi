@@ -17,8 +17,8 @@ alice = User.new(
   password: "password",
   username: "Alice",
   xp: 300,
-  level: 10,
-  reward: "Super GIFT!"
+  level: 6,
+  reward: "Silver medal"
 )
 
 file = File.open(Rails.root.join("db/seeds/users/alice.jpg"))
