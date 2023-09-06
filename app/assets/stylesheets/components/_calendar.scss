@@ -1,0 +1,65 @@
+.simple-calendar {
+  table {
+    width: 100%;
+    min-height: 80vh;
+    border-collapse: collapse;
+    background-image: url('calendar/sunflower.jpg'); /* Remplacez par le chemin vers votre image de tournesol */
+    background-size: cover;
+  }
+
+  td, th {
+    border: 1px solid #633d2e; /* Couleur terracota */
+    padding: 8px;
+    text-align: center;
+  }
+
+  .today {
+    background-color: rgba(99, 61, 46, 0.5); /* Couleur terracota semi-transparente */
+  }
+
+  .calendar-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #633d2e; /* Couleur terracota */
+    padding: 16px;
+    border-radius: 8px;
+    color: white;
+  }
+
+  .calendar-title {
+    margin: 0 16px;
+  }
+
+  /* Styles pour les événements/leçons ici */
+  .lesson {
+    color: white;
+    padding: 8px 24px;
+    border-radius: 4px;
+    background: #ddcd1e;
+    transition: background 0.3s ease;
+  }
+
+  .lesson:hover {
+    background:  #ddcd1e;
+  }
+}
+
+.terracota-theme {
+  background-color: #e4a788; /* Couleur terracota de base, à ajuster */
+}
+
+.terracota-theme .calendar-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: url('path/to/your/tournesol.jpg') no-repeat center center; /* Remplacez par le chemin vers votre image de tournesol */
+  background-size: cover;
+}
+
+.terracota-theme .date-link,
+.terracota-theme .lesson-link {
+  color: #fff; /* Couleur du texte, à ajuster */
+}
+
+/* Ajoutez d'autres styles selon vos préférences ici */

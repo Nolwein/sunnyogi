@@ -1,5 +1,12 @@
 class LessonsController < ApplicationController
 
+  def index
+    # @lessons = Lesson.all
+    @user = current_user
+    start_date = params.fetch(:start_date, Date.today).to_date
+    @lessons = Lesson.where(lesson_date: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
+  end
+
   def new
     @user = current_user
     @lesson = Lesson.new
@@ -13,6 +20,8 @@ class LessonsController < ApplicationController
     @user.xp += 5
     @user.save
     @lesson.video_url = "https://www.youtube.com/embed/videoseries?si=ekewy4betuNl00qf&amp;list=PLsQy3ETrPSMEeumNwo3itn_JHGado6__W"
+    @lesson.lesson_date = Time.now
+    @lesson.start_time = @lesson.lesson_date
 
     if @lesson.save
       redirect_to lesson_path(@lesson), notice: 'Lesson was successfuly created!'

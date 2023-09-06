@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get "profile", to: "pages#profile"
 
 
-  resources :lessons, only: [:new, :create, :show, :destroy] do
+  resources :lessons, only: [:index, :new, :create, :show, :destroy] do
     resources :favorites, only: [:create]
   end
 
