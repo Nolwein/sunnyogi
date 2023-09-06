@@ -11,9 +11,14 @@ export default class extends Controller {
   }
 
   toggleHeart(event) {
-    event.preventDefault();
+    // event.preventDefault();
 
     this.heartIconTarget.classList.toggle("fa-regular");
     this.heartIconTarget.classList.toggle("fa-solid");
+
+    // const link = event.currentTarget;
+    // link.click();
   }
 }
+
+//soit faire ajax

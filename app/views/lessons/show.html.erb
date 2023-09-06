@@ -1,22 +1,27 @@
-<div class="container">
+<div class="container show-container">
   <%# VIDEO YOUTUBE %>
-  <div class="d-flex justify-content-center shadow-lg p-3 mb-4 bg-body-tertiary rounded">
-      <iframe class="flex-item" width="1250" height="725" src="<%= @lesson.video_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <div class="d-flex justify-content-center shadow-lg p-3 mb-2 bg-body-tertiary rounded-4">
+      <iframe class="flex-item video-iframe" width="1250" height="725" src="<%= @lesson.video_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
 
   <div class="d-flex justify-content-between">
-    <h1 class="lesson-title"><%= @lesson.name  %></h1>
-      <p class="lesson-info pe-4 pb-1"><i class="fa-solid fa-clock" style="color: #5c5c5c;"> </i>  <%= @lesson.duration %></p>
-      <p class="lesson-info pe-4 pb-1"><i class="fa-solid fa-layer-group" style="color: #5c5c5c;">  </i> <%= @lesson.level %></p>
-      <p class="lesson-info pe-4 pb-1"><i class="fa-solid fa-bolt" style="color: #5c5c5c;">  </i> <%= @lesson.boost %></p>
-    <div class="mt-2">
+    <div class="d-flex justify-content-between">
+      <h1 class="lesson-title"><%= @lesson.name  %></h1>
+      <p class="lesson-info p-3"><i class="fa-solid fa-clock" style="color: #5c5c5c;"> </i>  <%= @lesson.duration %></p>
+      <p class="lesson-info p-3"><i class="fa-solid fa-layer-group" style="color: #5c5c5c;">  </i> <%= @lesson.level %></p>
+      <p class="lesson-info p-3"><i class="fa-solid fa-bolt" style="color: #5c5c5c;">  </i> <%= @lesson.boost %></p>
+    </div>
+    <div class="d-flex justify-content-between lesson-button ">
       <%= link_to "My History", profile_path, class: "green-btn" %>
-      <div class="mt-2" data-controller="favorites">
-        <%= link_to lesson_favorites_path(@lesson), data: {turbo_method: :post}, data: { action: "click->favorites#toggleHeart" } do %>
-        <i data-target="favorites.heartIcon" class="fa-regular fa-heart fa-beat fa-2xl ms-3" style="color: #668a6e;"></i>
+      <div data-controller="favorites">
+        <%= link_to lesson_favorites_path(@lesson), data: {turbo_method: :post, action: "click->favorites#toggleHeart" } do %>
+          <% if Favorite.where(user: current_user, lesson: @lesson).present? %>
+            <i data-target="favorites.heartIcon" class="fa-solid fa-heart fa-beat fa-2xl ms-3 mt-4 pl-3" style="color: #668a6e;"></i>
+          <% else %>
+            <i data-target="favorites.heartIcon" class="fa-regular fa-heart fa-beat fa-2xl ms-3 mt-4 pl-3" style="color: #668a6e;"></i>
+          <% end %>
         <%end%>
       </div>
-
     </div>
   </div>
 </div>
