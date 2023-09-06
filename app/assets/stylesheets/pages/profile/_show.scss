@@ -197,7 +197,7 @@
 
 .card-bottom-right-div {
   flex: 10%;
-  background-color: white;
+  // background-color: white;
   border-radius: 5px;
   width: 40px;
   height: 40px;
@@ -222,6 +222,11 @@
 
 
 // SCROLLING
+
+.profil-videos-container {
+  margin-left: 60px;
+}
+
 .scrolling-wrapper {
   overflow-x: auto;
   gap: 20px;
@@ -230,6 +235,7 @@
     flex: 1 0 445px;
   }
 }
+
 
 .scrolling-row {
   overflow: visible;
