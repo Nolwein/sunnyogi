@@ -4,10 +4,10 @@
 
 .profile-infos-card {
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  width: 40%;
+  // border: 1px solid #ddd;
+  // border-radius: 10px;
+  // box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 100%;
   position: relative;
   margin-bottom: 20px;
 }
@@ -207,7 +207,7 @@
 }
 
 .card-bottom-right-div:hover {
-  background-color: rgba(126, 21, 21, 0.5)!important;
+  background-color: rgba(152, 157, 158, 0.5)!important;
 }
 
 
@@ -237,4 +237,8 @@
 
 .col-5 {
   width: 20%;
+}
+
+.navbar-scrolled {
+  background-color: white;
 }

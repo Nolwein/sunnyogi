@@ -1,16 +1,20 @@
 <div class="container" id="profilepages">
 
   <!-- PROFILE -->
-  <div class="profile-infos-card">
-    <div class="d-flex">
-      <%= cl_image_tag @user.avatar.key, class: "user-avatar", alt: "User Avatar" %>
-      <p class= "hello-name-profile"> Hello <%= @user.username %> ! </p>
+    <div class="profile-infos-card d-flex flex-column justify-content-center " >
+      <div class="d-flex justify-content-center">
+          <%= cl_image_tag @user.avatar.key, class: "user-avatar", alt: "User Avatar" %>
+      </div>
+      <div class="d-flex justify-content-center">
+        <p class= "hello-name-profile"> Hello <%= @user.username %> ! </p>
+      </div>
+        <div class="d-flex justify-content-center">
+          <p>  <i class="fa-solid fa-user-plus fa-fade fa-xl" style="color: #cbbc45;"></i>        <%= @user.xp%> XP </p>
+          <p class="px-5"> <i class="fa-solid fa-rocket fa-fade fa-xl" style="color: #cbbc45;"></i>       <%= @user.level %></p>
+          <p> <i class="fa-solid fa-trophy fa-fade fa-xl" style="color: #cbbc45;"></i>        <%= @user.reward %></p>
+        </div>
+      <%= link_to 'Update Profile', edit_user_registration_path, class: 'update-profile-btn' %>
     </div>
-
-
-    <%= link_to 'Update Profile', edit_user_registration_path, class: 'update-profile-btn' %>
-  </div>
-
   <!-- FAVORITES -->
   <div>
     <h3> FAVORITES :</h3>
@@ -33,7 +37,7 @@
                 </div>
                 <div class="card-bottom-right-div" data-controller="popover" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-placement="bottom" title="Delete info" data-bs-content="Do you want to delete this favorite?">
                   <%= button_to favorite_path(favorite), method: :delete, form_class: 'delete-alertbox', class: 'd-inline', class: 'no-border-sweet-alert' do %>
-                    <i class="fa-solid fa-heart fa-xl" style="color: #668A6E;"></i>
+                    <i class="fa-solid fa-trash fa-xl" style="color: #000000;"></i>
                   <% end %>
                 </div>
               </div>
