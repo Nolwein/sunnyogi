@@ -3,7 +3,6 @@ class LessonsController < ApplicationController
   def new
     @user = current_user
     @lesson = Lesson.new
-    @user = current_user
   end
 
   def create
@@ -11,10 +10,12 @@ class LessonsController < ApplicationController
     @lesson = Lesson.new(lesson_params)
     @user = current_user
     @lesson.user = @user
+    @user.xp += 5
+    @user.save
     @lesson.video_url = "https://www.youtube.com/embed/videoseries?si=ekewy4betuNl00qf&amp;list=PLsQy3ETrPSMEeumNwo3itn_JHGado6__W"
 
     if @lesson.save
-      redirect_to lesson_path(@lesson), notice: 'Lesson was successfuly created !'
+      redirect_to lesson_path(@lesson), notice: 'Lesson was successfuly created!'
     else
       render :new
     end
@@ -31,7 +32,7 @@ class LessonsController < ApplicationController
     Favorite.where(lesson: @lesson).destroy_all
 
     if @lesson.destroy
-      flash[:notice] = "Lesson was successfully deleted !"
+      flash[:notice] = "Lesson was successfully deleted!"
       redirect_to profile_path
     else
       flash[:alert] = "Error."
