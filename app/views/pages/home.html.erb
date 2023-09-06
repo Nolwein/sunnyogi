@@ -4,30 +4,25 @@
   </div>
   <%# SCRIPT FOR THE NAVBAR %>
 <script>
-  $(document).ready(function () {
-    var $navbar = $('.navbar-homepage');
-    var scrollThreshold = 680;
+document.addEventListener("DOMContentLoaded", function() {
+  var navbar = document.querySelector('.navbar-homepage');
+  var scrollThreshold = 680;
+  var scrollButton = document.getElementById("scrollButton");
 
-    $(window).on('scroll', function () {
-      if ($(this).scrollTop() > scrollThreshold) {
-        $navbar.addClass('navbar-scrolled');
-      } else {
-        $navbar.removeClass('navbar-scrolled');
-      }
-
-      // Show/hide the button based on scroll position
-      if ($(this).scrollTop() > scrollThreshold) {
-        $("#scrollButton").show();
-      } else {
-        $("#scrollButton").hide();
-      }
-    });
-
-    // Redirect to new lesson page when the button is clicked
-    $("#scrollButton").on("click", function() {
-      window.location.href = "<%= new_lesson_path %>";
-    });
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > scrollThreshold) {
+      navbar.classList.add('navbar-scrolled');
+      scrollButton.style.display = "block";
+    } else {
+      navbar.classList.remove('navbar-scrolled');
+      scrollButton.style.display = "none";
+    }
   });
+
+  scrollButton.addEventListener("click", function() {
+    window.location.href = "/lessons/new";
+  });
+});
 </script>
 
 
