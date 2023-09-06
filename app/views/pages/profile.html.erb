@@ -1,5 +1,4 @@
 <div id="profilepages">
-
   <!-- PROFILE -->
     <div class="profile-infos-card d-flex flex-column justify-content-center " >
       <div class="d-flex justify-content-center">
@@ -19,7 +18,7 @@
     </div>
   <!-- FAVORITES -->
   <div class="profil-videos-container">
-    <h3> FAVORITES :</h3>
+    <h3 class="title-profil-video"> <u> Favorites </u> </h3>
     <div>
       <div class="scrolling-wrapper d-flex">
         <% @favorites.each do |favorite| %>
@@ -54,7 +53,7 @@
 
   <!-- HISTORY -->
   <div class="profil-videos-container">
-    <h3>HISTORY:</h3>
+    <h3 class="title-profil-video"> <u> History </u></h3>
     <div>
       <div class="scrolling-wrapper d-flex">
           <% @lessons.each do |lesson| %>
@@ -81,7 +80,7 @@
   </div>
 
 
-  <div class="container mt-4 mb-3">
+  <div class="button-profile mt-5 mb-4 ">
     <%= link_to "Go back to HOME", root_path, class: "green-btn" %>
   </div>
 </div>
