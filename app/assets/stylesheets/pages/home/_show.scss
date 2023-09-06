@@ -72,28 +72,32 @@ body {
 }
 
 .title-spicy-1 {
+  font-family: 'Spicy Rice', cursive;
+  font-size: 50px;
   color: #668A6E;
-  padding-top: 30px;
 }
 
 .title-spicy-2 {
   color: #C27E62;
-  padding-left: 90px;
-  padding-top: 30px;
+  // padding-left: 90px;
+  font-family: 'Spicy Rice', cursive;
+  font-size: 50px;
 }
 
-.subtitle-2 {
-  padding-left: 90px;
+
+.title-spicy-3 {
+  font-family: 'Spicy Rice', cursive;
+  font-size: 50px;
+  color: #d1c992;
 }
 
-.tile-spicy-3 {
-  color: #F0E7A8;
-  padding-top: 30px;
+.title-spicy-4 {
+  font-family: 'Spicy Rice', cursive;
+  font-size: 50px;
 }
 
-.tile-spicy-4 {
-  padding-top: 30px;
-}
+
+
 
 .custom-size-footer {
   font-size: 44px;
@@ -106,21 +110,8 @@ body {
   font-weight: bold;
 }
 
-.custom-parent-element-relative {
-  position: relative;
-}
-
-.custom-child-element-absolute-left {
-  position: relative;
-  top: 0px;
-  left: -150px;
-}
 
 .button-homepage {
   margin-top: 25px;
   margin-left: 50px;
 }
-
-
-
-
