@@ -127,7 +127,9 @@ Lesson.create!(
   level: "beginner",
   boost: "Chest",
   video_url: "https://www.youtube.com/embed/j7rKKpwdXNE?si=-E0xYlhB7E45HTqi",
-  created_at: Time.new(2023, 8, rand(1..31), rand(0..23), rand(0..59), rand(0..59))
+  created_at: "2023-08-02 10:00:00",
+  lesson_date: "2023-08-02 10:00:00",
+  start_time: "2023-08-02 10:00:00",
 )
 
 Lesson.create!(
@@ -140,7 +142,9 @@ Lesson.create!(
   level: "beginner",
   boost: "Neck and Shoulder",
   video_url: "https://www.youtube.com/embed/SedzswEwpPw?si=tUOsNJfwLNrrnLCu",
-  created_at: Time.new(2023, 8, rand(1..31), rand(0..23), rand(0..59), rand(0..59))
+  created_at: "2023-08-13 10:00:00",
+  lesson_date: "2023-08-13 10:00:00",
+  start_time: "2023-08-13 10:00:00",
 )
 
 Lesson.create!(
@@ -153,7 +157,9 @@ Lesson.create!(
   level: "beginner",
   boost: "Hip Flexor",
   video_url: "https://www.youtube.com/embed/m2UEzPheLYk?si=1rr4IAo2C7TZzm5o",
-  created_at: Time.new(2023, 8, rand(1..31), rand(0..23), rand(0..59), rand(0..59))
+  created_at: "2023-08-17 10:00:00",
+  lesson_date: "2023-08-17 10:00:00",
+  start_time: "2023-08-17 10:00:00",
 )
 
 Lesson.create!(
@@ -166,7 +172,9 @@ Lesson.create!(
   level: "beginner",
   boost: "Backbend",
   video_url: "https://www.youtube.com/embed/fhMxNjie7AE",
-  created_at: Time.new(2023, 8, rand(1..31), rand(0..23), rand(0..59), rand(0..59))
+  created_at: "2023-08-14 10:00:00",
+  lesson_date: "2023-08-14 10:00:00",
+  start_time: "2023-08-14 10:00:00",
 )
 
 Lesson.create!(
@@ -179,7 +187,9 @@ Lesson.create!(
   level: "intermediate",
   boost: "Neck",
   video_url: "https://www.youtube.com/embed/NJU8dcCacRY",
-  created_at: Time.new(2023, 8, rand(1..31), rand(0..23), rand(0..59), rand(0..59))
+  created_at: "2023-08-09 10:00:00",
+  lesson_date: "2023-08-09 10:00:00",
+  start_time: "2023-08-09 10:00:00",
 )
 
 
@@ -194,7 +204,9 @@ Lesson.create!(
   level: "intermediate",
   boost: "Hamstring",
   video_url: "https://www.youtube.com/embed/_LvGTQ3Aq-g",
-  created_at: Time.new(2023, 8, rand(1..31), rand(0..23), rand(0..59), rand(0..59)),
+  created_at: "2023-08-06 10:00:00",
+  lesson_date: "2023-08-06 10:00:00",
+  start_time: "2023-08-06 10:00:00",
 )
 
 Lesson.create!(
@@ -207,7 +219,9 @@ Lesson.create!(
   level: "intermediate",
   boost: "Hamstring",
   video_url: "https://www.youtube.com/embed/2xF_teT2_V0?si=xxep_OTARvXfTnur",
-  created_at: Time.parse("2023-08-28 00:00:00")
+  created_at: "2023-09-03 10:00:00",
+  lesson_date: "2023-09-03 10:00:00",
+  start_time: "2023-09-03 10:00:00",
 )
 
 Lesson.create!(
@@ -220,7 +234,9 @@ Lesson.create!(
   level: "advanced",
   boost: "Hips",
   video_url: "https://www.youtube.com/embed/FZ-6i6gZawM",
-  created_at: Time.new(2023, 8, rand(1..31), rand(0..23), rand(0..59), rand(0..59))
+  created_at: "2023-09-06 10:00:00",
+  lesson_date: "2023-09-06 10:00:00",
+  start_time: "2023-09-06 10:00:00",
 )
 
 Lesson.create!(
@@ -233,7 +249,9 @@ Lesson.create!(
   level: "advanced",
   boost: "Backend",
   video_url: "https://www.youtube.com/embed/IbTFIRBDUdw?si=uA6QpC4r3TeNQvGR",
-  created_at: Time.new(2023, 8, rand(1..31), rand(0..23), rand(0..59), rand(0..59))
+  created_at: "2023-09-01 10:00:00",
+  lesson_date: "2023-09-01 10:00:00",
+  start_time: "2023-09-01 10:00:00",
 )
 
 puts "Lessons created!"
