@@ -1,11 +1,16 @@
+
+
+
 <div class="simple-calendar">
-  <div class="calendar-heading terracota-theme">
-    <%= link_to profile_path, class: "green-btn" do %>
+  <div style="display: flex; justify-content: center;">
+    <%= link_to profile_path, class: "green-btn-round" do %>
       <i class="fas fa-user"></i>
     <% end %>
-    <%= link_to t('simple_calendar.previous', default: '<'), calendar.url_for_previous_view, class: 'btn terracota-theme' %>
+  </div>
+  <div class="calendar-heading terracota-theme">
+    <%= link_to raw('<i class="fa-solid fa-circle-arrow-left fa-2xl" style="color: #668a6e;"></i>'), calendar.url_for_previous_view, class: 'btn terracota-theme' %>
     <span class="calendar-title terracota-theme"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></span>
-    <%= link_to t('simple_calendar.next', default: '>'), calendar.url_for_next_view, class: 'btn terracota-theme' %>
+    <%= link_to raw('<i class="fa-solid fa-circle-arrow-right fa-2xl" style="color: #668a6e;"></i>'), calendar.url_for_next_view, class: 'btn terracota-theme' %>
   </div>
 
   <table class="table table-striped">

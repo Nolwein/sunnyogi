@@ -1,17 +1,9 @@
-<%# <%= calendar attributes: {class: 'calendar'} do |date, e| %>
-    <%# <%= date.strftime('%d') %>
-    <%# <% @lessons.each do |lesson| %>
-      <%# <% if lesson.lesson_date.to_date == date %>
-        <%# <%= link_to lesson.name, lesson_path(lesson), class: 'lesson' %>
-      <%# <% end %>
-    <%# <% end %>
-<%# <% end %>
 
 <%= month_calendar(events: @lessons) do |date, lessons| %>
   <%= date %>
 
   <% lessons.each do |lesson| %>
-    <div class="lesson">
+    <div class="lesson" style="background-color: #acceb4;">
       <p><%= link_to lesson.name, lesson_path(lesson) %></p>
     </div>
   <% end %>
