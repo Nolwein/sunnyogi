@@ -19,7 +19,7 @@ class LessonsController < ApplicationController
     @lesson.user = @user
     @user.xp += 5
     @user.save
-    @lesson.video_url = "https://www.youtube.com/embed/videoseries?si=ekewy4betuNl00qf&amp;list=PLsQy3ETrPSMEeumNwo3itn_JHGado6__W"
+    @lesson.video_url = "https://www.youtube.com/embed/videoseries?si=bfj0BV8G6LJPg0bG&amp;list=PLsQy3ETrPSMG7TJvuvg480UmdDj7MAqDi"
     @lesson.lesson_date = Time.now
     @lesson.start_time = @lesson.lesson_date
 

@@ -8,31 +8,22 @@
     margin-top: 16px;
   }
 
-  td, th {
-    border: 1px solid #633d2e; /* Couleur terracota */
-    padding: 8px;
-    text-align: center;
-  }
-
-  .today {
-    background-color: rgba(99, 61, 46, 0.5); /* Couleur terracota semi-transparente */
+  th {
+    text-align: center !important;
+    font-family: Encode Sans;
   }
 
   .calendar-heading {
     display: flex;
     justify-content: center;
     align-items: center;
-    // background-color: #633d2e; /* Couleur terracota */
-    fill: rgba(255, 252, 237, 0.37);
-    backdrop-filter: blur(60px);
-    padding: 0 16px;
     // border-radius: 8px;
     color: white;
   }
 
   .calendar-title {
     margin: 0 16px;
-    color: black;
+    color:  #E2C3B7;
     font-family: Spicy Rice;
   }
 
@@ -70,4 +61,16 @@
   color: #fff; /* Couleur du texte, à ajuster */
 }
 
+.simple-calendar .today {
+  background: #b9c3bd!important ;
+}
 /* Ajoutez d'autres styles selon vos préférences ici */
+
+.simple-calendar .prev-month {
+  // background: #dacaca!important;
+}
+
+// .table-striped > tbody > tr:nth-of-type(odd) > * {
+//   --bs-table-color-type: var(--bs-table-striped-color);
+//   --bs-table-bg-type: rgb(200 100 112 / 18%)!important;
+// }
