@@ -45,3 +45,10 @@
 .custom-20px-gap-navbar {
   gap: 20px;
 }
+
+
+
+/* To custom the width of the dropdown (Bootstrap 10rem by default) */
+.dropdown-menu {
+  --bs-dropdown-min-width: 0!important;
+}
