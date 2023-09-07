@@ -13,7 +13,7 @@ window.addEventListener(('turbo:load'), () => {
       })
         .then((result) => {
           if (result.isConfirmed) {
-            document.querySelector('.delete-alertbox').submit()
+            event.target.submit();
           }
         })
         .catch(event.preventDefault())
