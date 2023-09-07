@@ -1,11 +1,19 @@
 .green-btn {
   background-color: #668a6e;
-  padding: 14px 22px;
+  padding: 15px 40px;
   text-decoration: none;
-  color: white;
+  color:rgba(254, 254, 235, 0.87);
   border: none;
-  border-radius: 20px;
+  border-radius: 50px;
   cursor: pointer;
+  color: var(--blanc-cass, #FEFEEB);
+  text-align: center;
+  font-family: Encode Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 475;
+  line-height: normal;
+  display: inline-block;
 }
 
 .pink-btn-big {
@@ -24,4 +32,41 @@
 
 .pink-btn-big:hover{
   color:  #C27E62;
+}
+
+.orange-btn {
+  background-color:#668A6E;
+  padding: 15px 40px;
+  text-decoration: none;
+  color:rgba(254, 254, 235, 0.87);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: var(--blanc-cass, #FEFEEB);
+  text-align: center;
+  font-family: Encode Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 475;
+  line-height: normal;
+  display: inline-block;
+}
+
+
+.orange-btn-calendar {
+  display: inline-block;
+  background-color: #668A6E;
+  padding: 15px 20px;
+  text-decoration: none;
+  color:rgba(254, 254, 235, 0.87);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: var(--blanc-cass, #FEFEEB);
+  text-align: center;
+  font-family: Encode Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 475;
+  line-height: normal;
 }

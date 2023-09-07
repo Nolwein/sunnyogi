@@ -1,7 +1,7 @@
 <div class="simple-calendar">
   <div class="calendar-heading terracota-theme">
     <%= link_to profile_path, class: "green-btn" do %>
-      <i class="fas fa-user"></i> 
+      <i class="fas fa-user"></i>
     <% end %>
     <%= link_to t('simple_calendar.previous', default: '<'), calendar.url_for_previous_view, class: 'btn terracota-theme' %>
     <span class="calendar-title terracota-theme"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></span>
@@ -16,8 +16,6 @@
         <% end %>
       </tr>
     </thead>
-
-
 
 
     <tbody>
