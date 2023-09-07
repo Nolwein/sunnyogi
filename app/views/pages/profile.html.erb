@@ -4,22 +4,16 @@
       <div class="d-flex justify-content-center">
           <%= cl_image_tag @user.avatar.key, class: "user-avatar", alt: "User Avatar" %>
       </div>
-      <div class="d-flex justify-content-center">
-        <%= link_to 'Update Profile', edit_user_registration_path, class: 'update-profile-btn' %>
-      </div>
+      <%# <div class="d-flex justify-content-center"> %>
+        <%#= link_to 'Update Profile', edit_user_registration_path, class: 'update-profile-btn' %>
+      <%# </div> %>
       <div class="d-flex justify-content-center">
         <p class= "hello-name-profile"> Hello <%= @user.username %> ! </p>
       </div>
-        <div class="d-flex justify-content-center">
-          <p>  <i class="fa-solid fa-user-plus fa-fade fa-xl" style="color: #cbbc45;"></i>        <%= @user.xp%>  XP </p>
-          <p class="px-5"> <i class="fa-solid fa-rocket fa-fade fa-xl" style="color: #cbbc45;"></i>       <%= @user.level %></p>
-          <p> <i class="fa-solid fa-trophy fa-fade fa-xl" style="color: #cbbc45;"></i>        <%= @user.reward %></p>
-        </div>
-      <%# Calendar %>
-      <div class="button-profile mt-5 mb-4">
-        <%= link_to lessons_path, class: "green-btn" do %>
-          <i class="fa-regular fa-calendar-days" style="color: #18191b;"></i>
-        <% end %>
+      <div class="d-flex justify-content-center">
+        <p>  <i class="fa-solid fa-user-plus fa-fade fa-xl" style="color: #cbbc45;"></i>        <%= @user.xp%>  XP </p>
+        <p class="px-5"> <i class="fa-solid fa-rocket fa-fade fa-xl" style="color: #cbbc45;"></i>       <%= @user.level %></p>
+        <p> <i class="fa-solid fa-trophy fa-fade fa-xl" style="color: #cbbc45;"></i>        <%= @user.reward %></p>
       </div>
     </div>
   <!-- FAVORITES -->
@@ -38,7 +32,6 @@
                 <br>
                 <span class="custom-subtext-card">
                   <%= favorite.lesson.start_time.strftime('%d %b') %> -
-                  <%# LE BOLD VEUT PAS MARCHER... %>
                     <span class="custom-subtext-card"><%= favorite.lesson.duration %> min</span>
                   </span>
                 </div>
@@ -73,7 +66,6 @@
                   <br>
                   <span class="custom-subtext-card">
                     <%= lesson.created_at.strftime('%d %b') %> -
-                    <%# LE CUSTOM BOLD VEUT PAS MARCHER... %>
                     <span class="custom-subtext-card"><%= lesson.duration %> min</span>
                   </span>
                 </div>
