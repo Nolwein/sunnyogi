@@ -89,3 +89,45 @@
   -webkit-animation: lol 3s 500ms infinite ease-in-out;
   animation: lol 3s 500ms infinite ease-in-out;
 }
+
+.loader-font{
+  font-family: 'Spicy Rice', cursive;
+}
+
+.loader-font-yellow{
+  font-family: 'Spicy Rice', cursive;
+  color:white;
+  font-size: 40px; /* Ajustez la taille de la police selon vos préférences */
+  text-align: center; /* Pour centrer le texte à l'écran */
+  padding-top: 35px;
+}
+
+
+@keyframes sauterTexte {
+  0%, 100% {
+      transform: translateY(0); /* Position de départ et position finale : pas de saut */
+  }
+  50% {
+      transform: translateY(-10px); /* Saut vers le haut */
+  }
+}
+
+.texte-sautant {
+  animation: sauterTexte 0.5s alternate infinite; /* Animation en boucle avec effet de saut */
+}
+
+@keyframes entrerDepuisLaGauche {
+  from {
+      transform: translateX(-100%); /* Fait démarrer le texte en dehors de l'écran à gauche */
+  }
+  to {
+      transform: translateX(0); /* Déplace le texte à sa position finale */
+  }
+}
+
+.texte-animation {
+  animation: entrerDepuisLaGauche 3s forwards; /* Lance l'animation pendant 2 secondes et la maintient à sa position finale */
+  display: inline-block; /* Permet au texte de s'afficher lettre par lettre */
+  overflow: hidden; /* Cache les lettres en dehors de la zone d'affichage */
+  white-space: nowrap; /* Empêche le texte de passer à la ligne */
+}
