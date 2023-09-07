@@ -51,4 +51,5 @@
 /* To custom the width of the dropdown (Bootstrap 10rem by default) */
 .dropdown-menu {
   --bs-dropdown-min-width: 0!important;
+  --bs-dropdown-link-active-bg: none!important;
 }
