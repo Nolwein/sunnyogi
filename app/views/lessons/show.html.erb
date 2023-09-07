@@ -4,21 +4,23 @@
       <iframe class="flex-item video-iframe" width="1250" height="725" src="<%= @lesson.video_url %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
 
-  <div class="d-flex justify-content-between">
-    <div class="d-flex justify-content-between">
+  <div class="d-flex justify-content-between show-information">
+    <div class="d-flex justify-content-center">
       <h1 class="lesson-title"><%= @lesson.name  %></h1>
-      <p class="lesson-info p-3"><i class="fa-solid fa-clock" style="color: #5c5c5c;"> </i>  <%= @lesson.duration %></p>
-      <p class="lesson-info p-3"><i class="fa-solid fa-layer-group" style="color: #5c5c5c;">  </i> <%= @lesson.level %></p>
-      <p class="lesson-info p-3"><i class="fa-solid fa-bolt" style="color: #5c5c5c;">  </i> <%= @lesson.boost %></p>
+      <p class="lesson-info"><i class="fa-solid fa-wind" style="color: #5c5c5c;"> </i> <%= @lesson.breathing ? "Breathing" : "No Breathing" %></p>
+      <p class="lesson-info"><i class="fa-solid fa-layer-group" style="color: #5c5c5c;">  </i> <%= @lesson.level %></p>
+      <p class="lesson-info"><i class="fa-solid fa-bolt" style="color: #5c5c5c;">  </i> <%= @lesson.boost %></p>
+      <p class="lesson-info"><i class="fa-solid fa-spa" style="color: #5c5c5c;"> </i> <%= @lesson.meditation ? "Meditation" : "No Meditation" %></p>
+      <p class="lesson-info"><i class="fa-solid fa-clock" style="color: #5c5c5c;"> </i>  <%= @lesson.duration %></p>
     </div>
-    <div class="d-flex justify-content-between lesson-button ">
-      <%= link_to "My History", profile_path, class: "green-btn" %>
+    <div class="d-flex justify-content-between ">
+      <%= link_to "My History", profile_path, class: "green-btn lesson-button" %>
       <div data-controller="favorites">
         <%= link_to lesson_favorites_path(@lesson), data: {turbo_method: :post, action: "click->favorites#toggleHeart" } do %>
           <% if Favorite.where(user: current_user, lesson: @lesson).present? %>
-            <i data-target="favorites.heartIcon" class="fa-solid fa-heart fa-beat fa-2xl ms-3 mt-4 pl-3" style="color: #668a6e;"></i>
+            <i data-target="favorites.heartIcon" class="fa-solid fa-heart fa-beat fa-2xl show-heart" style="color: #668a6e;"></i>
           <% else %>
-            <i data-target="favorites.heartIcon" class="fa-regular fa-heart fa-beat fa-2xl ms-3 mt-4 pl-3" style="color: #668a6e;"></i>
+            <i data-target="favorites.heartIcon" class="fa-regular fa-heart fa-beat fa-2xl show-heart" style="color: #668a6e;"></i>
           <% end %>
         <%end%>
       </div>

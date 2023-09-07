@@ -1,12 +1,20 @@
 .video-iframe {
     height: auto;
-    max-height: 500px;
+    // max-height: 500px;
     aspect-ratio: 16 / 9;
     width: 100%;
 }
 
 .show-container {
   max-height: calc(100vh - 91px);
+}
+
+.show-information {
+  padding-top: 15px;
+}
+
+.show-heart {
+  padding-top: 30px;
 }
 
 .lesson-title {
@@ -20,13 +28,14 @@
 }
 
 .lesson-info {
-  margin-top: auto;
+  // margin-top: auto;
   color: black;
   font-family: 'Encode Sans', 'sans-serif';
   font-size: 20px;
   font-style: normal;
   font-weight: 300;
-  line-height: normal;
+  padding: 15px !important;
+  // line-height: normal;
 }
 
 .fa-solid {
@@ -34,5 +43,10 @@
 }
 
 .lesson-button {
+  padding: 15px !important;
   margin-bottom: auto;
+}
+
+.show-heart{
+  padding: 27px;
 }
