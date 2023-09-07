@@ -9,7 +9,10 @@
     <div class="nav-item" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <div class="d-flex">
+          <div class="d-flex custom-20px-gap-navbar">
+            <%= link_to lessons_path, class: "orange-btn-calendar" do %>
+              <i class="fa-regular fa-calendar-days" style="color: white;"></i>
+            <% end %>
             <%= link_to "Get started", new_lesson_path, class: "orange-btn", id: "scrollButton"  %>
             <li class="nav-item dropdown">
               <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -23,7 +26,10 @@
             </li>
           </div>
           <% else %>
-            <div class="d-flex">
+            <div class="d-flex custom-20px-gap-navbar">
+              <%= link_to lessons_path, class: "orange-btn-calendar" do %>
+                <i class="fa-regular fa-calendar-days" style="color: white;"></i>
+              <% end %>
               <%= link_to "Get started", new_lesson_path, class: "orange-btn", id: "scrollButton"  %>
               <%= link_to "Login", new_user_session_path, class: "orange-btn" %>
             </div>
