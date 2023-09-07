@@ -16,8 +16,9 @@
           <p> <i class="fa-solid fa-trophy fa-fade fa-xl" style="color: #cbbc45;"></i>        <%= @user.reward %></p>
         </div>
       <div class="button-profile mt-5 mb-4">
-        <%= link_to "Voir le Calendrier", lessons_path, class: "green-btn" %>
-        <%= link_to "Retourner à l'Accueil", root_path, class: "green-btn" %>
+        <%= link_to lessons_path, class: "green-btn" do %>
+          <i class="fa-regular fa-calendar-days" style="color: #18191b;"></i>
+        <% end %>
       </div>
     </div>
   <!-- FAVORITES -->

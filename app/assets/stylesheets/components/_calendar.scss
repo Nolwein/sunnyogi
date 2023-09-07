@@ -21,39 +21,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #633d2e; /* Couleur terracota */
+    // background-color: #633d2e; /* Couleur terracota */
+    fill: rgba(255, 252, 237, 0.37);
+    backdrop-filter: blur(60px);
     padding: 16px;
-    border-radius: 8px;
+    // border-radius: 8px;
     color: white;
   }
 
   .calendar-title {
     margin: 0 16px;
+    color: black;
   }
 
   /* Styles pour les événements/leçons ici */
   .lesson {
     color: white;
-    padding: 8px 24px;
+    padding: 6px 22px;
     border-radius: 4px;
-    background: #ddcd1e;
+    background:  rgba(90, 164, 164, .6);
     transition: background 0.3s ease;
   }
 
   .lesson:hover {
-    background:  #ddcd1e;
+    background:  rgba(90, 164, 164, .9);
   }
 }
 
 .terracota-theme {
-  background-color: #e4a788; /* Couleur terracota de base, à ajuster */
+  // background-color:  rgba(90, 164, 164, .6); /* Couleur terracota de base, à ajuster */
+  // fill: rgba(255, 252, 237, 0.37);
+  // backdrop-filter: blur(60px);
+  background: url('path/to/your/tournesol.jpg') no-repeat center center;
 }
 
 .terracota-theme .calendar-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: url('path/to/your/tournesol.jpg') no-repeat center center; /* Remplacez par le chemin vers votre image de tournesol */
+   /* Remplacez par le chemin vers votre image de tournesol */
   background-size: cover;
 }
 
