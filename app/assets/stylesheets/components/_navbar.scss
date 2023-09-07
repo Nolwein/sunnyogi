@@ -60,7 +60,31 @@
 }
 
 
-#scrollButton {
-  margin-right: 20px;
+.orange-btn-calendar {
   display: inline-block;
+  background-color:#864226;
+  padding: 15px 20px;
+  text-decoration: none;
+  color:rgba(254, 254, 235, 0.87);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--blanc-cass, #FEFEEB);
+  text-align: center;
+  font-family: Encode Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+
+
+
+#scrollButton {
+  display: inline-block;
+}
+
+.custom-20px-gap-navbar {
+  gap: 20px;
 }
